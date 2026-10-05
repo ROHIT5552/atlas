@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import clsx from 'clsx';
 import {
   LayoutDashboard,
   Sparkles,
@@ -22,125 +23,156 @@ import {
   ShieldAlert,
   Waves,
   FileCheck,
-  TrendingDown,
   Unlock,
   Zap
 } from 'lucide-react';
 
+const menuSections = [
+  {
+    id: 'core',
+    title: 'Intelligence',
+    items: [
+      { id: 'dashboard', label: 'Control Tower', icon: LayoutDashboard },
+      { id: 'explorer', label: 'Regulatory Explorer', icon: Sparkles, badge: 'SSoT' },
+      { id: 'passport', label: 'Regulatory Passport', icon: FileText, badge: 'URN' }
+    ]
+  },
+  {
+    id: 'lifecycle',
+    title: 'Lifecycle',
+    items: [
+      { id: 'consumer-eligibility', label: 'Feasibility', icon: UserCheck, badge: '01' },
+      { id: 'generator-eligibility', label: 'Generator', icon: Zap, badge: 'GEP' },
+      { id: 'captive-structuring', label: 'Contracted', icon: Factory, badge: '02' },
+      { id: 'connectivity', label: 'Delivered', icon: Network, badge: '03' },
+      { id: 'tod', label: 'Scheduled', icon: Clock, badge: '04' },
+      { id: 'settlement-waterfall', label: 'Settled', icon: Waves, badge: '05' },
+      { id: 'bill-audit', label: 'Billed', icon: FileCheck, badge: '06' }
+    ]
+  },
+  {
+    id: 'platform',
+    title: 'Platform',
+    items: [
+      { id: 'downstream-hub', label: 'Downstream Apps', icon: Code2, badge: '10' },
+      { id: 'guard-rules', label: 'Compliance Rulebook', icon: ShieldAlert, badge: 'Guard' },
+      { id: 'change-propagator', label: 'Change Propagator', icon: SlidersHorizontal, badge: 'Risk' },
+      { id: 'landed-cost', label: 'Landed Cost', icon: Calculator, badge: 'LCoP' }
+    ]
+  },
+  {
+    id: 'directory',
+    title: 'Directory',
+    items: [
+      { id: 'tariffs', label: 'Tariff Master', icon: Receipt, badge: '882' },
+      { id: 'open-access', label: 'Open Access', icon: Unlock },
+      { id: 'banking', label: 'Banking', icon: PiggyBank },
+      { id: 'captive', label: 'Captive Rules', icon: Factory },
+      { id: 'metering', label: 'Metering', icon: Gauge },
+      { id: 'scheduling', label: 'Scheduling & DSM', icon: CalendarClock },
+      { id: 'states', label: 'States', icon: MapPin, badge: '17' },
+      { id: 'discoms', label: 'DISCOMs', icon: Building2, badge: '49' },
+      { id: 'regulations', label: 'Orders & Gazette', icon: FileText },
+      { id: 'compare', label: 'Comparator', icon: GitCompare },
+      { id: 'admin', label: 'Audit Log', icon: SlidersHorizontal },
+      { id: 'api-docs', label: 'API & SDK', icon: Terminal }
+    ]
+  }
+];
+
 export default function Sidebar({ activeTab, setActiveTab }) {
-  const menuSections = [
-    {
-      title: 'ATLAS INTELLIGENCE CORE',
-      items: [
-        { id: 'dashboard', label: 'Atlas Control Tower', icon: LayoutDashboard },
-        { id: 'explorer', label: 'Regulatory Explorer', icon: Sparkles, badge: 'SSoT Flow' },
-        { id: 'passport', label: 'GES Regulatory Passport', icon: FileText, badge: 'NewRa URN' }
-      ]
-    },
-    {
-      title: 'THE 6 LIFECYCLE ENGINES',
-      items: [
-        { id: 'consumer-eligibility', label: '1. Feasibility (GES Qualifier)', icon: UserCheck, badge: 'Stage 1' },
-        { id: 'generator-eligibility', label: '1b. Generator (GEP Qualifier)', icon: Zap, badge: 'GEP' },
-        { id: 'captive-structuring', label: '2. Contracted (26/51 Equity)', icon: Factory, badge: 'Stage 2' },
-        { id: 'connectivity', label: '3. Delivered (Voltage Matrix)', icon: Network, badge: 'Stage 3' },
-        { id: 'tod', label: '4. Scheduled (96-Block TOD)', icon: Clock, badge: 'Stage 4' },
-        { id: 'settlement-waterfall', label: '5. Settled (Loss Waterfall)', icon: Waves, badge: 'Stage 5' },
-        { id: 'bill-audit', label: '6. Billed (DISCOM Invoice Audit)', icon: FileCheck, badge: 'Stage 6' }
-      ]
-    },
-    {
-      title: 'PLATFORM SUITE & RISK',
-      items: [
-        { id: 'downstream-hub', label: 'Downstream Apps Hub', icon: Code2, badge: '10 Apps' },
-        { id: 'guard-rules', label: 'Guard Compliance Rulebook', icon: ShieldAlert, badge: 'Guard' },
-        { id: 'change-propagator', label: 'Regulatory Change Propagator', icon: SlidersHorizontal, badge: 'Risk' },
-        { id: 'landed-cost', label: 'Landed Cost Calculator', icon: Calculator, badge: 'LCoP' }
-      ]
-    },
-    {
-      title: 'STATUTORY DIRECTORY & AUDIT',
-      items: [
-        { id: 'tariffs', label: 'Tariff Master (882 Tariffs)', icon: Receipt },
-        { id: 'open-access', label: 'Open Access & Grid Losses', icon: Unlock },
-        { id: 'banking', label: 'RE Banking & Settlement', icon: PiggyBank },
-        { id: 'captive', label: 'Captive Regulations Archive', icon: Factory },
-        { id: 'metering', label: 'Metering & Telemetry', icon: Gauge },
-        { id: 'scheduling', label: 'Scheduling & DSM Rules', icon: CalendarClock },
-        { id: 'states', label: 'State Master (17)', icon: MapPin },
-        { id: 'discoms', label: 'DISCOM Directory (49)', icon: Building2 },
-        { id: 'regulations', label: 'SERC Orders & Gazette', icon: FileText },
-        { id: 'compare', label: 'Multi-State Comparator', icon: GitCompare },
-        { id: 'admin', label: 'Governance & Audit Log', icon: SlidersHorizontal },
-        { id: 'api-docs', label: 'REST API & SDK Reference', icon: Terminal }
-      ]
-    }
-  ];
+  const [collapsed, setCollapsed] = useState(() => new Set());
+
+  const toggleSection = (id) => {
+    setCollapsed((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   return (
-    <aside className="w-64 shrink-0 bg-[#0B0F19]/95 border-r border-slate-800/80 min-h-[calc(100vh-53px)] p-3.5 flex flex-col justify-between select-none">
-      <div className="space-y-5">
-        {menuSections.map((section, sIdx) => (
-          <div key={sIdx} className="space-y-1">
-            <h2 className="px-3 text-[10px] font-bold tracking-wider text-slate-500 uppercase">
-              {section.title}
-            </h2>
-            <div className="space-y-0.5">
-              {section.items.map((item) => {
-                const Icon = item.icon;
-                const isActive = activeTab === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-all ${
-                      isActive
-                        ? 'bg-slate-800/90 text-teal-300 font-semibold shadow-sm border border-slate-700/80'
-                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 border border-transparent'
-                    }`}
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <Icon
-                        className={`w-4 h-4 transition-colors ${
-                          isActive ? 'text-teal-400' : 'text-slate-500 group-hover:text-slate-300'
-                        }`}
-                      />
-                      <span>{item.label}</span>
-                    </div>
+    <aside className="flex h-full w-72 shrink-0 flex-col border-r border-white/10 bg-[#09193C] text-white">
+      <nav
+        aria-label="Atlas"
+        className="min-h-0 flex-1 overflow-y-auto px-3 py-3 [scrollbar-color:rgba(255,255,255,0.16)_transparent] [scrollbar-width:thin]"
+      >
+        {menuSections.map((section, index) => {
+          const isOpen = !collapsed.has(section.id);
+          const sectionHasActive = section.items.some((item) => item.id === activeTab);
 
-                    {item.badge ? (
-                      <span className={`px-1.5 py-0.5 rounded text-[9px] font-semibold tracking-wide ${
-                        isActive
-                          ? 'bg-teal-500/20 text-teal-300 border border-teal-500/30'
-                          : 'bg-slate-800 text-slate-400 border border-slate-700'
-                      }`}>
-                        {item.badge}
-                      </span>
-                    ) : isActive ? (
-                      <ChevronRight className="w-3.5 h-3.5 text-teal-400" />
-                    ) : null}
-                  </button>
-                );
-              })}
+          return (
+            <div key={section.id} className={clsx(index > 0 && 'mt-2')}>
+              <button
+                type="button"
+                onClick={() => toggleSection(section.id)}
+                aria-expanded={isOpen}
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 transition hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#28B8B4]"
+              >
+                <span className={clsx(sectionHasActive && 'text-[#7CD9D6]')}>{section.title}</span>
+                <ChevronRight className={clsx('size-3.5 transition-transform', isOpen && 'rotate-90')} />
+              </button>
+
+              {isOpen && (
+                <div className="space-y-0.5">
+                  {section.items.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = activeTab === item.id;
+
+                    return (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => setActiveTab(item.id)}
+                        aria-current={isActive ? 'page' : undefined}
+                        title={item.label}
+                        className={clsx(
+                          'group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition',
+                          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#28B8B4]',
+                          isActive
+                            ? 'bg-white/10 text-white shadow-[inset_2px_0_0_#28B8B4]'
+                            : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                        )}
+                      >
+                        <Icon
+                          className={clsx(
+                            'size-4 shrink-0',
+                            isActive ? 'text-[#28B8B4]' : 'text-slate-400 group-hover:text-slate-200'
+                          )}
+                        />
+                        <span className="min-w-0 flex-1 truncate">{item.label}</span>
+                        {item.badge ? (
+                          <span
+                            className={clsx(
+                              'shrink-0 rounded-md px-1.5 py-0.5 font-mono text-[10px] font-medium leading-none',
+                              isActive
+                                ? 'bg-[#28B8B4]/15 text-[#7CD9D6]'
+                                : 'bg-white/5 text-slate-400'
+                            )}
+                          >
+                            {item.badge}
+                          </span>
+                        ) : null}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-          </div>
-        ))}
-      </div>
+          );
+        })}
+      </nav>
 
-      {/* Footer System Status & Branding */}
-      <div className="mt-6 pt-3 border-t border-[#2D50A1]/30 px-2 space-y-2 text-[11px]">
-        <div className="flex items-center justify-between text-[#C6CBD9]">
-          <span>Target States</span>
-          <span className="text-[#28B8B4] font-mono font-semibold">17 / 17</span>
-        </div>
-        <div className="flex items-center justify-between text-[#C6CBD9]">
-          <span>DISCOMs Active</span>
-          <span className="text-[#7CD9D6] font-mono font-semibold">49 Utilities</span>
-        </div>
-        <div className="pt-2 border-t border-slate-800/60 flex items-center gap-2">
-          <img src="/brand/newra-symbol-aqua.png" alt="NewRa Grids" className="h-4 w-4 object-contain opacity-90" />
-          <div className="text-[10px] text-slate-400 leading-tight">
-            <span className="text-white font-semibold">NewRa Atlas</span> • SSoT v1.0
+      <div className="border-t border-white/10 p-3">
+        <div className="rounded-xl bg-white/5 px-3 py-3">
+          <div className="flex items-center justify-between text-xs">
+            <span className="text-slate-400">Coverage</span>
+            <span className="font-mono text-[11px] text-[#7CD9D6]">17 · 49</span>
+          </div>
+          <div className="mt-2.5 flex items-center gap-2">
+            <span className="size-1.5 rounded-full bg-[#28B8B4]" />
+            <span className="text-[11px] text-slate-300">Atlas SSoT · live</span>
           </div>
         </div>
       </div>

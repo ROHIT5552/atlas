@@ -99,7 +99,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07122A] text-[#F4F5F7] flex flex-col selection:bg-[#28B8B4]/30 selection:text-[#28B8B4]">
+    <div className="flex h-screen flex-col overflow-hidden bg-[#07122A] text-[#F4F5F7] selection:bg-[#28B8B4]/30 selection:text-[#28B8B4]">
       {/* Top Fixed Header */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -110,12 +110,12 @@ export default function App() {
       />
 
       {/* Main Layout Body */}
-      <div className="flex-1 flex max-w-full">
+      <div className="flex min-h-0 flex-1 overflow-hidden">
         {/* Left Sidebar */}
         <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
         {/* Dynamic Page Main Content */}
-        <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 overflow-y-auto max-h-[calc(100vh-57px)]">
+        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <ErrorBoundary>
             {activeTab === 'dashboard' && (
               <Dashboard
