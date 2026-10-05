@@ -1,0 +1,72 @@
+[
+  {
+    "id": "230v",
+    "code": "230 V",
+    "value_kv": 0.23,
+    "tier": "LT",
+    "unit": "V"
+  },
+  {
+    "id": "415v",
+    "code": "415 V",
+    "value_kv": 0.415,
+    "tier": "LT",
+    "unit": "V"
+  },
+  {
+    "id": "11kv",
+    "code": "11 kV",
+    "value_kv": 11,
+    "tier": "HT",
+    "unit": "kV"
+  },
+  {
+    "id": "22kv",
+    "code": "22 kV",
+    "value_kv": 22,
+    "tier": "HT",
+    "unit": "kV"
+  },
+  {
+    "id": "33kv",
+    "code": "33 kV",
+    "value_kv": 33,
+    "tier": "HT",
+    "unit": "kV"
+  },
+  {
+    "id": "66kv",
+    "code": "66 kV",
+    "value_kv": 66,
+    "tier": "EHT",
+    "unit": "kV"
+  },
+  {
+    "id": "110kv",
+    "code": "110 kV",
+    "value_kv": 110,
+    "tier": "EHT",
+    "unit": "kV"
+  },
+  {
+    "id": "132kv",
+    "code": "132 kV",
+    "value_kv": 132,
+    "tier": "EHT",
+    "unit": "kV"
+  },
+  {
+    "id": "220kv",
+    "code": "220 kV",
+    "value_kv": 220,
+    "tier": "EHT",
+    "unit": "kV"
+  },
+  {
+    "id": "400kv",
+    "code": "400 kV",
+    "value_kv": 400,
+    "tier": "EHT",
+    "unit": "kV"
+  }
+]

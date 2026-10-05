@@ -1,0 +1,11 @@
+{
+  "name": "newra-regulatory-library",
+  "version": "1.0.0",
+  "description": "NewRa State & DISCOM Regulatory Library - Centralized Database for Indian Electricity Regulations",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "node server/server.js"
+  }
+}

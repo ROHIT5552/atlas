@@ -1,0 +1,2751 @@
+[
+  {
+    "id": "tod-msedcl-1",
+    "state_id": "maharashtra",
+    "discom_id": "msedcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Normal",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Morning Peak",
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Day Normal",
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Evening Super Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.1,
+        "tariff_rebate": 0,
+        "rate_delta": 1.1,
+        "unit": "Rs/kWh",
+        "type": "super-peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MERC Case No. 226 of 2024 (MYT Order FY 2025-26 to FY 2029-30)",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tata-power-mumbai-2",
+    "state_id": "maharashtra",
+    "discom_id": "tata-power-mumbai",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Normal",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Morning Peak",
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Day Normal",
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Evening Super Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.1,
+        "tariff_rebate": 0,
+        "rate_delta": 1.1,
+        "unit": "Rs/kWh",
+        "type": "super-peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MERC Case No. 221 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-adani-electricity-mumbai-3",
+    "state_id": "maharashtra",
+    "discom_id": "adani-electricity-mumbai",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Normal",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Morning Peak",
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Day Normal",
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Evening Super Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.1,
+        "tariff_rebate": 0,
+        "rate_delta": 1.1,
+        "unit": "Rs/kWh",
+        "type": "super-peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MERC Case No. 229 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-best-undertaking-4",
+    "state_id": "maharashtra",
+    "discom_id": "best-undertaking",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Normal",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Morning Peak",
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Day Normal",
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Evening Super Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.1,
+        "tariff_rebate": 0,
+        "rate_delta": 1.1,
+        "unit": "Rs/kWh",
+        "type": "super-peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MERC Case No. 222 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-dgvcl-5",
+    "state_id": "gujarat",
+    "discom_id": "dgvcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.85,
+        "rate_delta": -0.85,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Peak",
+        "start_time": "07:00",
+        "end_time": "11:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Normal Hours",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Early Morning Normal",
+        "start_time": "06:00",
+        "end_time": "07:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "GERC Tariff Order in Case No. 2280/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mgvcl-6",
+    "state_id": "gujarat",
+    "discom_id": "mgvcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.85,
+        "rate_delta": -0.85,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Peak",
+        "start_time": "07:00",
+        "end_time": "11:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Normal Hours",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Early Morning Normal",
+        "start_time": "06:00",
+        "end_time": "07:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "GERC Tariff Order Case No. 2281/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-pgvcl-7",
+    "state_id": "gujarat",
+    "discom_id": "pgvcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.85,
+        "rate_delta": -0.85,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Peak",
+        "start_time": "07:00",
+        "end_time": "11:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Normal Hours",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Early Morning Normal",
+        "start_time": "06:00",
+        "end_time": "07:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "GERC Tariff Order Case No. 2282/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-ugvcl-8",
+    "state_id": "gujarat",
+    "discom_id": "ugvcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.85,
+        "rate_delta": -0.85,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Peak",
+        "start_time": "07:00",
+        "end_time": "11:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Normal Hours",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Early Morning Normal",
+        "start_time": "06:00",
+        "end_time": "07:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "GERC Tariff Order Case No. 2283/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-torrent-power-gujarat-9",
+    "state_id": "gujarat",
+    "discom_id": "torrent-power-gujarat",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.85,
+        "rate_delta": -0.85,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Peak",
+        "start_time": "07:00",
+        "end_time": "11:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Normal Hours",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 0.85,
+        "tariff_rebate": 0,
+        "rate_delta": 0.85,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Early Morning Normal",
+        "start_time": "06:00",
+        "end_time": "07:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "GERC Tariff Order Case No. 2284/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-jvvnl-10",
+    "state_id": "rajasthan",
+    "discom_id": "jvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Solar Slot",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak Slot",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.25,
+        "tariff_rebate": 0,
+        "rate_delta": 1.25,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "RERC Tariff Order in Petition No. RERC-2134/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-avvnl-11",
+    "state_id": "rajasthan",
+    "discom_id": "avvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Solar Slot",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak Slot",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.25,
+        "tariff_rebate": 0,
+        "rate_delta": 1.25,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "RERC Tariff Order in Petition No. RERC-2135/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-jdvvnl-12",
+    "state_id": "rajasthan",
+    "discom_id": "jdvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Morning Solar Slot",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak Slot",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.25,
+        "tariff_rebate": 0,
+        "rate_delta": 1.25,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "RERC Tariff Order in Petition No. RERC-2136/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-bescom-13",
+    "state_id": "karnataka",
+    "discom_id": "bescom",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "KERC Tariff Order Case No. S/01/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mescom-14",
+    "state_id": "karnataka",
+    "discom_id": "mescom",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "KERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-hescom-15",
+    "state_id": "karnataka",
+    "discom_id": "hescom",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "KERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-gescom-16",
+    "state_id": "karnataka",
+    "discom_id": "gescom",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "KERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-cesc-karnataka-17",
+    "state_id": "karnataka",
+    "discom_id": "cesc-karnataka",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "KERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tangedco-18",
+    "state_id": "tamil-nadu",
+    "discom_id": "tangedco",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Morning Peak",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 1.35,
+        "tariff_rebate": 0,
+        "rate_delta": 1.35,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "tariff_addition": 1.35,
+        "tariff_rebate": 0,
+        "rate_delta": 1.35,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0.68,
+        "rate_delta": -0.68,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Transition Hours",
+        "start_time": "05:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      }
+    ],
+    "source": "TNERC Multi Year Tariff Order No. 7 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tsspdcl-19",
+    "state_id": "telangana",
+    "discom_id": "tsspdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "TSERC Retail Supply Tariff Order for FY 2025-26",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tsnpdcl-20",
+    "state_id": "telangana",
+    "discom_id": "tsnpdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "TSERC Retail Supply Tariff Order 2025-26",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-apspdcl-21",
+    "state_id": "andhra-pradesh",
+    "discom_id": "apspdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "APERC Tariff Order in OP No. 71 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-apepdcl-22",
+    "state_id": "andhra-pradesh",
+    "discom_id": "apepdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "APERC Tariff Order OP No. 72 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-apcpdcl-23",
+    "state_id": "andhra-pradesh",
+    "discom_id": "apcpdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "APERC Tariff Order OP No. 73 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mppkvvcl-jabalpur-24",
+    "state_id": "madhya-pradesh",
+    "discom_id": "mppkvvcl-jabalpur",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.2,
+        "rate_delta": -1.2,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MPERC Tariff Order in Petition No. 24 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mppkvvcl-indore-25",
+    "state_id": "madhya-pradesh",
+    "discom_id": "mppkvvcl-indore",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.2,
+        "rate_delta": -1.2,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MPERC Tariff Order Case 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mpmkvvcl-bhopal-26",
+    "state_id": "madhya-pradesh",
+    "discom_id": "mpmkvvcl-bhopal",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.2,
+        "rate_delta": -1.2,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Day",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "MPERC Tariff Order Case 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-pvvnl-27",
+    "state_id": "uttar-pradesh",
+    "discom_id": "pvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order in Petition No. 1990/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-dvvnl-28",
+    "state_id": "uttar-pradesh",
+    "discom_id": "dvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-mvvnl-29",
+    "state_id": "uttar-pradesh",
+    "discom_id": "mvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-puvvnl-30",
+    "state_id": "uttar-pradesh",
+    "discom_id": "puvvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-kesco-31",
+    "state_id": "uttar-pradesh",
+    "discom_id": "kesco",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-npcl-noida-32",
+    "state_id": "uttar-pradesh",
+    "discom_id": "npcl-noida",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Summer Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.1,
+        "rate_delta": -1.1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "05:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "UPERC Tariff Order in Petition No. 1991/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-dhbvn-33",
+    "state_id": "haryana",
+    "discom_id": "dhbvn",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.25,
+        "tariff_rebate": 0,
+        "rate_delta": 1.25,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "HERC Tariff Order in Case No. HERC/PRO-21/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-uhbvn-34",
+    "state_id": "haryana",
+    "discom_id": "uhbvn",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.25,
+        "tariff_rebate": 0,
+        "rate_delta": 1.25,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "HERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-pspcl-35",
+    "state_id": "punjab",
+    "discom_id": "pspcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak (Oct-May)",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.25,
+        "rate_delta": -1.25,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Summer Peak (Jun-Sep)",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.35,
+        "tariff_rebate": 0,
+        "rate_delta": 1.35,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "PSERC Tariff Order for FY 2025-26 in Petition No. 04 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-bses-rajdhani-36",
+    "state_id": "delhi",
+    "discom_id": "bses-rajdhani",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "14:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Afternoon Peak (Summer)",
+        "start_time": "14:00",
+        "end_time": "17:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Normal",
+        "start_time": "17:00",
+        "end_time": "21:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Night Peak",
+        "start_time": "21:00",
+        "end_time": "24:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "DERC Tariff Order Case No. 34/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-bses-yamuna-37",
+    "state_id": "delhi",
+    "discom_id": "bses-yamuna",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "14:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Afternoon Peak (Summer)",
+        "start_time": "14:00",
+        "end_time": "17:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Normal",
+        "start_time": "17:00",
+        "end_time": "21:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Night Peak",
+        "start_time": "21:00",
+        "end_time": "24:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "DERC Tariff Order Case No. 35/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tpddl-delhi-38",
+    "state_id": "delhi",
+    "discom_id": "tpddl-delhi",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "14:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Afternoon Peak (Summer)",
+        "start_time": "14:00",
+        "end_time": "17:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Normal",
+        "start_time": "17:00",
+        "end_time": "21:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Night Peak",
+        "start_time": "21:00",
+        "end_time": "24:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "DERC Tariff Order Case No. 36/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-ndmc-delhi-39",
+    "state_id": "delhi",
+    "discom_id": "ndmc-delhi",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.5,
+        "rate_delta": -1.5,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "14:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Afternoon Peak (Summer)",
+        "start_time": "14:00",
+        "end_time": "17:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Evening Normal",
+        "start_time": "17:00",
+        "end_time": "21:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 5,
+        "slot_name": "Night Peak",
+        "start_time": "21:00",
+        "end_time": "24:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "DERC Tariff Order 2024-25",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-cspdcl-40",
+    "state_id": "chhattisgarh",
+    "discom_id": "cspdcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Night Off-Peak",
+        "start_time": "23:00",
+        "end_time": "05:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "05:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "CSERC Tariff Order in Petition No. 12/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tpcodl-41",
+    "state_id": "odisha",
+    "discom_id": "tpcodl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak (6 PM - 12 AM)",
+        "start_time": "18:00",
+        "end_time": "24:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "OERC Retail Supply Tariff Order Case No. 112/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tpwodl-42",
+    "state_id": "odisha",
+    "discom_id": "tpwodl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak (6 PM - 12 AM)",
+        "start_time": "18:00",
+        "end_time": "24:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "OERC Tariff Order Case No. 113/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tpnodl-43",
+    "state_id": "odisha",
+    "discom_id": "tpnodl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak (6 PM - 12 AM)",
+        "start_time": "18:00",
+        "end_time": "24:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "OERC Tariff Order Case No. 114/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tpsodl-44",
+    "state_id": "odisha",
+    "discom_id": "tpsodl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "00:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Day Normal",
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak (6 PM - 12 AM)",
+        "start_time": "18:00",
+        "end_time": "24:00",
+        "tariff_addition": 0.8,
+        "tariff_rebate": 0,
+        "rate_delta": 0.8,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      }
+    ],
+    "source": "OERC Tariff Order Case No. 115/2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-wbsedcl-45",
+    "state_id": "west-bengal",
+    "discom_id": "wbsedcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Peak Hours",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.5,
+        "tariff_rebate": 0,
+        "rate_delta": 1.5,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Off-Peak Hours",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.2,
+        "rate_delta": -1.2,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      }
+    ],
+    "source": "WBERC Tariff Order in Case No. TP-95/23-24",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-cesc-kolkata-46",
+    "state_id": "west-bengal",
+    "discom_id": "cesc-kolkata",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "17:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Peak Hours",
+        "start_time": "17:00",
+        "end_time": "23:00",
+        "tariff_addition": 1.5,
+        "tariff_rebate": 0,
+        "rate_delta": 1.5,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Off-Peak Hours",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1.2,
+        "rate_delta": -1.2,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      }
+    ],
+    "source": "WBERC Tariff Order Case No. TP-96/23-24",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-upcl-47",
+    "state_id": "uttarakhand",
+    "discom_id": "upcl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Morning Peak (Winter)",
+        "start_time": "06:00",
+        "end_time": "09:00",
+        "tariff_addition": 1,
+        "tariff_rebate": 0,
+        "rate_delta": 1,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#f59e0b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Normal Hours",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Evening Peak",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "tariff_addition": 1.5,
+        "tariff_rebate": 0,
+        "rate_delta": 1.5,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 4,
+        "slot_name": "Off-Peak Hours",
+        "start_time": "22:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      }
+    ],
+    "source": "UERC Tariff Order in Petition No. 03 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-jbvnl-48",
+    "state_id": "jharkhand",
+    "discom_id": "jbvnl",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "17:30",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Peak Hours",
+        "start_time": "17:30",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Off-Peak Hours",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      }
+    ],
+    "source": "JSERC Tariff Order in Case No. 04 of 2024",
+    "verification_status": "Official Verified"
+  },
+  {
+    "id": "tod-tsuil-jamshedpur-49",
+    "state_id": "jharkhand",
+    "discom_id": "tsuil-jamshedpur",
+    "tariff_category_code": "HT-IND",
+    "season": "Annual / All Seasons",
+    "effective_from": "2025-04-01",
+    "effective_until": "2026-03-31",
+    "slots": [
+      {
+        "slot_index": 1,
+        "slot_name": "Normal Hours",
+        "start_time": "06:00",
+        "end_time": "17:30",
+        "tariff_addition": 0,
+        "tariff_rebate": 0,
+        "rate_delta": 0,
+        "unit": "Rs/kWh",
+        "type": "normal",
+        "color": "#64748b"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "Peak Hours",
+        "start_time": "17:30",
+        "end_time": "23:00",
+        "tariff_addition": 1.2,
+        "tariff_rebate": 0,
+        "rate_delta": 1.2,
+        "unit": "Rs/kWh",
+        "type": "peak",
+        "color": "#ef4444"
+      },
+      {
+        "slot_index": 3,
+        "slot_name": "Off-Peak Hours",
+        "start_time": "23:00",
+        "end_time": "06:00",
+        "tariff_addition": 0,
+        "tariff_rebate": 1,
+        "rate_delta": -1,
+        "unit": "Rs/kWh",
+        "type": "rebate",
+        "color": "#10b981"
+      }
+    ],
+    "source": "JSERC Tariff Order Case No. 07 of 2024",
+    "verification_status": "Official Verified"
+  }
+]

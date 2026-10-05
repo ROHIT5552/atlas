@@ -1,0 +1,38 @@
+[
+  {
+    "id": "lt",
+    "code": "LT",
+    "name": "Low Tension (LT)",
+    "voltage_range": "< 1 kV (230 V / 415 V)"
+  },
+  {
+    "id": "ht",
+    "code": "HT",
+    "name": "High Tension (HT)",
+    "voltage_range": "11 kV to 33 kV"
+  },
+  {
+    "id": "eht",
+    "code": "EHT",
+    "name": "Extra High Tension (EHT)",
+    "voltage_range": "66 kV to 400 kV"
+  },
+  {
+    "id": "oa-consumer",
+    "code": "OA-CONS",
+    "name": "Open Access Consumer (Third Party / Exchange)",
+    "voltage_range": "11 kV and above"
+  },
+  {
+    "id": "geoa-consumer",
+    "code": "GEOA-CONS",
+    "name": "Green Energy Open Access Consumer",
+    "voltage_range": "11 kV and above (100 kW+)"
+  },
+  {
+    "id": "captive-user",
+    "code": "CAPTIVE",
+    "name": "Captive / Group Captive Consumer",
+    "voltage_range": "11 kV and above"
+  }
+]

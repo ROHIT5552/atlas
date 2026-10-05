@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Glonto';
+  src: url('/brand/fonts/glonto-regular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/brand/fonts/instrument-sans-variable.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/brand/fonts/urbanist-variable.ttf') format('truetype');
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@theme {
+  --color-newra-midnight: #09193C;
+  --color-newra-aqua: #28B8B4;
+  --color-newra-blue: #2D50A1;
+  --color-newra-amber: #F79050;
+  --color-newra-bg-grey: #F4F5F7;
+  --color-newra-light-blue: #C6CBD9;
+  --color-newra-black: #121212;
+  --color-newra-dark-grey: #5C5C5C;
+  --color-newra-light-grey: #9D9D9D;
+
+  --font-heading: 'Glonto', 'Instrument Sans', sans-serif;
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Glonto', 'Instrument Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* NewRa Combined Palette Tokens */
+    --bg-base: #07122A;
+    --bg-surface: #09193C;
+    --bg-card: #0B1B3D;
+    --bg-card-hover: #102654;
+    --border-subtle: rgba(45, 80, 161, 0.25);
+    --border-card: rgba(40, 184, 180, 0.25);
+    
+    /* Brand Accents */
+    --accent-teal: #28B8B4;
+    --accent-sky: #2D50A1;
+    --accent-amber: #F79050;
+    --accent-emerald: #10B981;
+    
+    /* Text Hierarchy */
+    --text-primary: #F4F5F7;
+    --text-secondary: #C6CBD9;
+    --text-muted: #8E98B0;
+  }
+
+  body {
+    background-color: #07122A;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(40, 184, 180, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(45, 80, 161, 0.07) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(247, 144, 80, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: #F4F5F7;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    border: none;
+    text-align: left;
+    display: block;
+  }
+}
+
+/* Eye-Friendly Glass Cards */
+.calm-card {
+  background: rgba(22, 32, 50, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.calm-card:hover {
+  background: rgba(26, 38, 60, 0.9);
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Eye-Friendly Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Softer, Eye-Friendly Status Badges */
+.badge-verified {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-pending {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #FBBF24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-unverified {
+  background-color: rgba(244, 63, 94, 0.12);
+  color: #FB7185;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-estimated {
+  background-color: rgba(168, 85, 247, 0.12);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.badge-superseded {
+  background-color: rgba(148, 163, 184, 0.12);
+  color: #94A3B8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* ─── Executive Print / PDF Export Styles ─── */
+@media print {
+  body {
+    background-color: #07122A !important;
+    color: #F4F5F7 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, aside, .no-print, button, input[type="range"] {
+    display: none !important;
+  }
+
+  main {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .calm-card, div[class*="rounded-2xl"], div[class*="rounded-xl"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+
