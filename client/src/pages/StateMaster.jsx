@@ -13,7 +13,10 @@ export default function StateMaster({ onSelectState, onOpenDetail }) {
     async function loadStates() {
       try {
         setLoading(true);
-        const res = await api.getStates({ search: searchTerm, region: selectedRegion === 'All' ? undefined : selectedRegion });
+        const res = await api.getStates({
+          search: searchTerm,
+          ...(selectedRegion !== 'All' && { region: selectedRegion })
+        });
         setStates(res.states || []);
       } catch (err) {
         console.error('Failed to load states:', err);
@@ -169,4 +172,3 @@ export default function StateMaster({ onSelectState, onOpenDetail }) {
     </div>
   );
 }
-

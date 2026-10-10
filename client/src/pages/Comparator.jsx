@@ -105,10 +105,10 @@ export default function Comparator() {
           <button
             onClick={handleExportPDF}
             disabled={isExportingPdf || loading || !comparisonData?.matrix}
-            className="px-3.5 py-2 bg-[#2D50A1]/30 hover:bg-[#2D50A1]/50 border border-[#2D50A1] text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 transition disabled:opacity-50 shadow-md"
+            className="px-3.5 py-2 bg-[var(--surface-2)]/30 hover:bg-[var(--surface-2)]/50 border border-[var(--line)] text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 transition disabled:opacity-50 shadow-md"
             title="Download Regulatory Matrix as Executive PDF"
           >
-            <Printer className="w-3.5 h-3.5 text-[#28B8B4]" />
+            <Printer className="w-3.5 h-3.5 text-[var(--lilac)]" />
             <span>{isExportingPdf ? 'Exporting...' : 'Export Matrix (PDF)'}</span>
           </button>
 

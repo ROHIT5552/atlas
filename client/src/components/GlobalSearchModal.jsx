@@ -95,7 +95,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onSelectResult }) {
       onClick={onClose}
     >
       <div
-        className="w-full max-w-2xl bg-slate-900 border border-slate-700/80 rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+        className="vesper-dialog w-full max-w-2xl overflow-hidden flex flex-col max-h-[80vh]"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
       >
@@ -108,7 +108,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onSelectResult }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Type state, DISCOM, rule, loss %, tariff (e.g. Maharashtra HT, Gujarat wheeling, Rajasthan banking)..."
-            className="flex-1 bg-transparent border-none outline-none text-slate-100 placeholder-slate-500 text-sm"
+            className="vesper-search-input flex-1 bg-transparent border-none outline-none text-slate-100 placeholder-slate-500 text-sm"
           />
           {query && (
             <button
@@ -172,7 +172,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onSelectResult }) {
                   }`}
                 >
                   <div className="flex items-start gap-3 min-w-0">
-                    <div className="p-2 rounded-lg bg-slate-800/80 border border-slate-700/60 shrink-0 mt-0.5">
+                    <div className="vesper-icon-tile p-2 shrink-0 mt-0.5">
                       {getIcon(item.type)}
                     </div>
                     <div className="min-w-0">
@@ -207,4 +207,3 @@ export default function GlobalSearchModal({ isOpen, onClose, onSelectResult }) {
     </div>
   );
 }
-

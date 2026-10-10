@@ -93,10 +93,10 @@ export default function Sidebar({ activeTab, setActiveTab }) {
   };
 
   return (
-    <aside className="flex h-full w-72 shrink-0 flex-col border-r border-white/10 bg-[#09193C] text-white">
+    <aside className="vesper-sidebar flex h-full w-72 shrink-0 flex-col border-r text-[var(--text)] backdrop-blur-sm">
       <nav
         aria-label="Atlas"
-        className="min-h-0 flex-1 overflow-y-auto px-3 py-3 [scrollbar-color:rgba(255,255,255,0.16)_transparent] [scrollbar-width:thin]"
+        className="min-h-0 flex-1 overflow-y-auto px-3 py-3 [scrollbar-color:rgba(148,163,184,0.35)_transparent] [scrollbar-width:thin]"
       >
         {menuSections.map((section, index) => {
           const isOpen = !collapsed.has(section.id);
@@ -108,9 +108,9 @@ export default function Sidebar({ activeTab, setActiveTab }) {
                 type="button"
                 onClick={() => toggleSection(section.id)}
                 aria-expanded={isOpen}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 transition hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#28B8B4]"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-slate-400 transition hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400"
               >
-                <span className={clsx(sectionHasActive && 'text-[#7CD9D6]')}>{section.title}</span>
+                <span className={clsx(sectionHasActive && 'text-teal-400')}>{section.title}</span>
                 <ChevronRight className={clsx('size-3.5 transition-transform', isOpen && 'rotate-90')} />
               </button>
 
@@ -128,27 +128,27 @@ export default function Sidebar({ activeTab, setActiveTab }) {
                         aria-current={isActive ? 'page' : undefined}
                         title={item.label}
                         className={clsx(
-                          'group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition',
-                          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#28B8B4]',
+                          'vesper-nav-item group flex w-full items-center gap-3 rounded-full border px-3 py-2.5 text-left text-sm transition',
+                          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400',
                           isActive
-                            ? 'bg-white/10 text-white shadow-[inset_2px_0_0_#28B8B4]'
-                            : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                            ? 'border-slate-700 bg-slate-800/90 text-slate-100 shadow-sm'
+                            : 'border-transparent text-slate-300 hover:border-slate-800 hover:bg-slate-800/40 hover:text-slate-100'
                         )}
                       >
                         <Icon
                           className={clsx(
                             'size-4 shrink-0',
-                            isActive ? 'text-[#28B8B4]' : 'text-slate-400 group-hover:text-slate-200'
+                            isActive ? 'text-teal-400' : 'text-slate-500 group-hover:text-slate-300'
                           )}
                         />
                         <span className="min-w-0 flex-1 truncate">{item.label}</span>
                         {item.badge ? (
                           <span
                             className={clsx(
-                              'shrink-0 rounded-md px-1.5 py-0.5 font-mono text-[10px] font-medium leading-none',
+                              'shrink-0 rounded-md border px-1.5 py-0.5 font-mono text-[10px] font-medium leading-none',
                               isActive
-                                ? 'bg-[#28B8B4]/15 text-[#7CD9D6]'
-                                : 'bg-white/5 text-slate-400'
+                                ? 'border-teal-500/25 bg-teal-500/10 text-teal-400'
+                                : 'border-slate-700/80 bg-slate-800 text-slate-400'
                             )}
                           >
                             {item.badge}
@@ -164,14 +164,14 @@ export default function Sidebar({ activeTab, setActiveTab }) {
         })}
       </nav>
 
-      <div className="border-t border-white/10 p-3">
-        <div className="rounded-xl bg-white/5 px-3 py-3">
+      <div className="border-t border-slate-800 p-3">
+        <div className="rounded-xl border border-slate-800 bg-slate-950/80 px-3 py-3">
           <div className="flex items-center justify-between text-xs">
             <span className="text-slate-400">Coverage</span>
-            <span className="font-mono text-[11px] text-[#7CD9D6]">17 · 49</span>
+            <span className="font-mono text-[11px] font-semibold text-teal-400">17 · 49</span>
           </div>
           <div className="mt-2.5 flex items-center gap-2">
-            <span className="size-1.5 rounded-full bg-[#28B8B4]" />
+            <span className="size-1.5 rounded-full bg-teal-400" />
             <span className="text-[11px] text-slate-300">Atlas SSoT · live</span>
           </div>
         </div>

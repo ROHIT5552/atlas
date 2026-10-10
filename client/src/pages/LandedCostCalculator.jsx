@@ -219,10 +219,10 @@ export default function LandedCostCalculator() {
           <button
             onClick={handleExportPDF}
             disabled={isExportingPdf || loading || !profile}
-            className="flex items-center gap-2 px-4 py-2 bg-[#2D50A1]/30 hover:bg-[#2D50A1]/50 border border-[#2D50A1] text-white rounded-xl text-xs font-semibold transition disabled:opacity-50 shadow-md"
+            className="flex items-center gap-2 px-4 py-2 bg-[var(--surface-2)]/30 hover:bg-[var(--surface-2)]/50 border border-[var(--line)] text-white rounded-xl text-xs font-semibold transition disabled:opacity-50 shadow-md"
             title="Download LCoP Analysis as Executive PDF"
           >
-            <Printer className="w-4 h-4 text-[#28B8B4]" />
+            <Printer className="w-4 h-4 text-[var(--lilac)]" />
             <span>{isExportingPdf ? 'Generating PDF...' : 'Export LCoP PDF'}</span>
           </button>
           <span className="px-3 py-1 rounded-xl bg-teal-500/10 border border-teal-500/25 text-xs font-semibold font-mono text-teal-300">
@@ -476,13 +476,13 @@ export default function LandedCostCalculator() {
             </div>
 
             {/* Route Comparison Bar Chart */}
-            <div className="p-6 rounded-3xl bg-[#0B1B3D] border border-[#2D50A1]/40 shadow-xl space-y-4">
+            <div className="p-6 rounded-3xl bg-[var(--surface-1)] border border-[var(--line)]/40 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white uppercase tracking-wider">
                     Route Benchmarking vs DISCOM Grid Tariff
                   </h3>
-                  <p className="text-xs text-[#C6CBD9]">Direct comparison of effective tariffs and buyer savings margins.</p>
+                  <p className="text-xs text-[var(--muted)]">Direct comparison of effective tariffs and buyer savings margins.</p>
                 </div>
               </div>
 
@@ -506,15 +506,15 @@ export default function LandedCostCalculator() {
           </div>
 
           {/* Mathematical Equations & Audit Proof Table */}
-          <div className="p-6 rounded-3xl bg-[#0B1B3D] border border-[#2D50A1]/40 shadow-xl space-y-4">
+          <div className="p-6 rounded-3xl bg-[var(--surface-1)] border border-[var(--line)]/40 shadow-xl space-y-4">
             <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#28B8B4]" />
+              <ShieldCheck className="w-4 h-4 text-[var(--lilac)]" />
               <span>Institutional Regulatory Equations & Statutory Citations</span>
             </h3>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#07122A] text-[#C6CBD9] uppercase text-[10px] font-bold border-b border-[#2D50A1]/30">
+                <thead className="bg-[var(--bg)] text-[var(--muted)] uppercase text-[10px] font-bold border-b border-[var(--line)]/30">
                   <tr>
                     <th className="px-4 py-3">Cost Component</th>
                     <th className="px-4 py-3">Value / Formula</th>
@@ -523,64 +523,64 @@ export default function LandedCostCalculator() {
                     <th className="px-4 py-3">Statutory Basis</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#2D50A1]/30 text-[#F4F5F7]">
+                <tbody className="divide-y divide-[#2D50A1]/30 text-[var(--text)]">
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Base RE PPA Rate</td>
-                    <td className="px-4 py-3 font-mono text-[#28B8B4]">â‚¹{baseRePpaTariff.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">â‚¹{baseRePpaTariff.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">â‚¹{baseRePpaTariff.toFixed(2)}</td>
                     <td className="px-4 py-3 font-mono">â‚¹{baseRePpaTariff.toFixed(2)}</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">Contractual PPA term</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">Contractual PPA term</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Technical Grid Losses ({selectedVoltage})</td>
-                    <td className="px-4 py-3 font-mono text-[#F79050]">
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">
                       {totalLossPct}% (Tx {txLossPct}% + Wh {whLossPct}%)
                     </td>
                     <td className="px-4 py-3 font-mono">+â‚¹{lossCostComponent.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{lossCostComponent.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">Multiplier: 1/(1 - Loss)</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">Multiplier: 1/(1 - Loss)</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Intra-State Transmission Charge</td>
                     <td className="px-4 py-3 font-mono">â‚¹{rawTxChargePerMwDay}/MW/day</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{txChargePerKwh.toFixed(3)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{txChargePerKwh.toFixed(3)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">State STU MYT Tariff Order</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">State STU MYT Tariff Order</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Wheeling Charge</td>
                     <td className="px-4 py-3 font-mono">â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">DISCOM Open Access Order</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">DISCOM Open Access Order</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Cross Subsidy Surcharge (CSS)</td>
                     <td className="px-4 py-3 font-mono">â‚¹{rawCss.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-bold text-[#28B8B4]">â‚¹0.00 (Exempted)</td>
-                    <td className="px-4 py-3 font-mono text-[#F79050]">+â‚¹{rawCss.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">Electricity Rules 2005 Rule 3</td>
+                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">â‚¹0.00 (Exempted)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+â‚¹{rawCss.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">Electricity Rules 2005 Rule 3</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Additional Surcharge (AS)</td>
                     <td className="px-4 py-3 font-mono">â‚¹{rawAs.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-bold text-[#28B8B4]">â‚¹0.00 (Exempted)</td>
-                    <td className="px-4 py-3 font-mono text-[#F87171]">+â‚¹{rawAs.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">Supreme Court & SERC Orders</td>
+                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">â‚¹0.00 (Exempted)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+â‚¹{rawAs.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">Supreme Court & SERC Orders</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Electricity Duty ({electricityDutyPct}%)</td>
                     <td className="px-4 py-3 font-mono">â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 font-mono">+â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 text-[#C6CBD9]">State Electricity Duty Act</td>
+                    <td className="px-4 py-3 text-[var(--muted)]">State Electricity Duty Act</td>
                   </tr>
-                  <tr className="bg-[#07122A] font-bold text-sm">
-                    <td className="px-4 py-3 text-[#28B8B4]">Total Landed Tariff (â‚¹/kWh)</td>
-                    <td className="px-4 py-3 font-mono text-[#C6CBD9]">â€”</td>
-                    <td className="px-4 py-3 font-mono text-[#28B8B4] text-base">â‚¹{captiveLandedCost.toFixed(2)}</td>
+                  <tr className="bg-[var(--bg)] font-bold text-sm">
+                    <td className="px-4 py-3 text-[var(--lilac)]">Total Landed Tariff (â‚¹/kWh)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--muted)]">â€”</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)] text-base">â‚¹{captiveLandedCost.toFixed(2)}</td>
                     <td className="px-4 py-3 font-mono text-white text-base">â‚¹{thirdPartyLandedCost.toFixed(2)}</td>
-                    <td className="px-4 py-3 text-xs text-[#28B8B4]">DISCOM: â‚¹{(retailGridTariff + facCharge).toFixed(2)}</td>
+                    <td className="px-4 py-3 text-xs text-[var(--lilac)]">DISCOM: â‚¹{(retailGridTariff + facCharge).toFixed(2)}</td>
                   </tr>
                 </tbody>
               </table>

@@ -99,7 +99,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-[#07122A] text-[#F4F5F7] selection:bg-[#28B8B4]/30 selection:text-[#28B8B4]">
+    <div className="vesper-app flex h-screen flex-col overflow-hidden text-[var(--text)] selection:bg-[var(--violet)]/30 selection:text-[var(--lilac)]">
       {/* Top Fixed Header */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -110,7 +110,7 @@ export default function App() {
       />
 
       {/* Main Layout Body */}
-      <div className="flex min-h-0 flex-1 overflow-hidden">
+      <div className="vesper-app-body flex min-h-0 flex-1 overflow-hidden">
         {/* Left Sidebar */}
         <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -246,4 +246,3 @@ export default function App() {
     </div>
   );
 }
-

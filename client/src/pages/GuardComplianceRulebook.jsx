@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ShieldAlert,
   ShieldCheck,
@@ -98,7 +98,7 @@ export default function GuardComplianceRulebook() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#09193C] via-[#0B1B3D] to-[#07122A] border border-[#2D50A1]/40 shadow-xl">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[var(--surface-1)] via-[var(--surface-1)] to-[var(--bg)] border border-[var(--line)]/40 shadow-xl">
         <div className="flex items-center gap-4">
           <div className="p-3 rounded-xl bg-red-500/20 border border-red-500/40 text-red-400">
             <ShieldAlert className="w-7 h-7" />
@@ -110,18 +110,18 @@ export default function GuardComplianceRulebook() {
               </span>
               <h1 className="text-xl font-bold text-white tracking-tight">NewRa Guard Compliance Rulebook Engine</h1>
             </div>
-            <p className="text-xs text-[#C6CBD9]/80 mt-1">
+            <p className="text-xs text-[var(--muted)]/80 mt-1">
               Atlas codifies the statutory limits; NewRa Guard audits live projects against these thresholds to fire automated alerts.
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-xs text-[#C6CBD9]/70 font-medium">State:</span>
+          <span className="text-xs text-[var(--muted)]/70 font-medium">State:</span>
           <select
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
-            className="bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#28B8B4]"
+            className="bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[var(--line)]"
           >
             {states.map(s => (
               <option key={s.id} value={s.id}>{s.name} ({s.regulator_code})</option>
@@ -133,10 +133,10 @@ export default function GuardComplianceRulebook() {
       {/* Grid: 3 Interactive Compliance Simulators */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* 1. Captive 26/51 Rule Audit */}
-        <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4 shadow-lg">
-          <div className="flex justify-between items-center pb-2 border-b border-[#2D50A1]/30">
+        <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4 shadow-lg">
+          <div className="flex justify-between items-center pb-2 border-b border-[var(--line)]/30">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
-              <Scale className="w-4 h-4 text-[#28B8B4]" /> 1. Captive 26/51 Rule
+              <Scale className="w-4 h-4 text-[var(--lilac)]" /> 1. Captive 26/51 Rule
             </h3>
             <span className={`px-2 py-0.5 text-[10px] font-bold rounded ${
               isCaptiveCompliant
@@ -150,7 +150,7 @@ export default function GuardComplianceRulebook() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-xs mb-1">
-                <span className="text-[#C6CBD9]/70">Captive Equity Share:</span>
+                <span className="text-[var(--muted)]/70">Captive Equity Share:</span>
                 <span className="font-mono font-bold text-white">{testEquityPct}% (Min: 26%)</span>
               </div>
               <input
@@ -160,13 +160,13 @@ export default function GuardComplianceRulebook() {
                 step="0.5"
                 value={testEquityPct}
                 onChange={(e) => setTestEquityPct(Number(e.target.value))}
-                className="w-full accent-[#28B8B4] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#28B8B4] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
-                <span className="text-[#C6CBD9]/70">Annual Consumption:</span>
+                <span className="text-[var(--muted)]/70">Annual Consumption:</span>
                 <span className="font-mono font-bold text-white">{testConsumptionPct}% (Min: 51%)</span>
               </div>
               <input
@@ -176,14 +176,14 @@ export default function GuardComplianceRulebook() {
                 step="0.5"
                 value={testConsumptionPct}
                 onChange={(e) => setTestConsumptionPct(Number(e.target.value))}
-                className="w-full accent-[#28B8B4] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#28B8B4] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
           </div>
 
           <div className={`p-3 rounded-xl border text-[11px] ${
             isCaptiveCompliant
-              ? 'bg-[#07122A] border-green-500/30 text-[#C6CBD9]'
+              ? 'bg-[var(--bg)] border-green-500/30 text-[var(--muted)]'
               : 'bg-red-500/10 border-red-500/40 text-red-300'
           }`}>
             {isCaptiveCompliant ? (
@@ -195,10 +195,10 @@ export default function GuardComplianceRulebook() {
         </div>
 
         {/* 2. Contract Demand Overshoot Simulator */}
-        <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4 shadow-lg">
-          <div className="flex justify-between items-center pb-2 border-b border-[#2D50A1]/30">
+        <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4 shadow-lg">
+          <div className="flex justify-between items-center pb-2 border-b border-[var(--line)]/30">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
-              <Gauge className="w-4 h-4 text-[#F79050]" /> 2. CD Overshoot Guard
+              <Gauge className="w-4 h-4 text-[var(--lilac)]" /> 2. CD Overshoot Guard
             </h3>
             <span className={`px-2 py-0.5 text-[10px] font-bold rounded ${
               isCdOvershot ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
@@ -210,7 +210,7 @@ export default function GuardComplianceRulebook() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-xs mb-1">
-                <span className="text-[#C6CBD9]/70">Contract Demand:</span>
+                <span className="text-[var(--muted)]/70">Contract Demand:</span>
                 <span className="font-mono font-bold text-white">{testCdKva} kVA</span>
               </div>
               <input
@@ -220,14 +220,14 @@ export default function GuardComplianceRulebook() {
                 step="100"
                 value={testCdKva}
                 onChange={(e) => setTestCdKva(Number(e.target.value))}
-                className="w-full accent-[#2D50A1] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#2D50A1] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
-                <span className="text-[#C6CBD9]/70">Actual Max Demand:</span>
-                <span className="font-mono font-bold text-[#F79050]">{testActualMdKva} kVA</span>
+                <span className="text-[var(--muted)]/70">Actual Max Demand:</span>
+                <span className="font-mono font-bold text-[var(--lilac)]">{testActualMdKva} kVA</span>
               </div>
               <input
                 type="range"
@@ -236,34 +236,34 @@ export default function GuardComplianceRulebook() {
                 step="50"
                 value={testActualMdKva}
                 onChange={(e) => setTestActualMdKva(Number(e.target.value))}
-                className="w-full accent-[#F79050] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#F79050] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-[#07122A] border border-[#2D50A1]/30 text-xs font-mono space-y-1">
+          <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30 text-xs font-mono space-y-1">
             <div className="flex justify-between text-[11px]">
-              <span className="text-[#C6CBD9]/70">Excess Demand:</span>
+              <span className="text-[var(--muted)]/70">Excess Demand:</span>
               <span className={excessKva > 0 ? 'text-red-400 font-bold' : 'text-green-400'}>
                 {excessKva} kVA
               </span>
             </div>
             <div className="flex justify-between text-[11px]">
-              <span className="text-[#C6CBD9]/70">Penalty Rate:</span>
+              <span className="text-[var(--muted)]/70">Penalty Rate:</span>
               <span className="text-white">150% (₹{penaltyDemandRate}/kVA)</span>
             </div>
-            <div className="flex justify-between text-[11px] pt-1 border-t border-[#2D50A1]/30">
-              <span className="text-[#C6CBD9]/70">Penalty Surcharge:</span>
-              <span className="text-[#F79050] font-bold">₹{excessDemandPenalty.toLocaleString()}/mo</span>
+            <div className="flex justify-between text-[11px] pt-1 border-t border-[var(--line)]/30">
+              <span className="text-[var(--muted)]/70">Penalty Surcharge:</span>
+              <span className="text-[var(--lilac)] font-bold">₹{excessDemandPenalty.toLocaleString()}/mo</span>
             </div>
           </div>
         </div>
 
         {/* 3. Power Factor Guard */}
-        <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4 shadow-lg">
-          <div className="flex justify-between items-center pb-2 border-b border-[#2D50A1]/30">
+        <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4 shadow-lg">
+          <div className="flex justify-between items-center pb-2 border-b border-[var(--line)]/30">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
-              <TrendingDown className="w-4 h-4 text-[#7CD9D6]" /> 3. Power Factor Guard
+              <TrendingDown className="w-4 h-4 text-[var(--lilac)]" /> 3. Power Factor Guard
             </h3>
             <span className={`px-2 py-0.5 text-[10px] font-bold rounded ${
               testPf >= 0.95 ? 'bg-green-500/20 text-green-400' : testPf < 0.90 ? 'bg-red-500/20 text-red-400' : 'bg-slate-700 text-white'
@@ -275,7 +275,7 @@ export default function GuardComplianceRulebook() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-xs mb-1">
-                <span className="text-[#C6CBD9]/70">Recorded Monthly PF:</span>
+                <span className="text-[var(--muted)]/70">Recorded Monthly PF:</span>
                 <span className="font-mono font-bold text-white">{testPf}</span>
               </div>
               <input
@@ -285,20 +285,20 @@ export default function GuardComplianceRulebook() {
                 step="0.01"
                 value={testPf}
                 onChange={(e) => setTestPf(Number(e.target.value))}
-                className="w-full accent-[#7CD9D6] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#7CD9D6] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-[#07122A] border border-[#2D50A1]/30 text-xs font-mono space-y-1.5">
+          <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30 text-xs font-mono space-y-1.5">
             <div className="flex justify-between text-[11px]">
-              <span className="text-[#C6CBD9]/70">Status:</span>
+              <span className="text-[var(--muted)]/70">Status:</span>
               <span className={`font-bold ${pfAdjustmentColor}`}>{pfStatus}</span>
             </div>
-            <p className="text-[11px] text-[#C6CBD9]/70 leading-tight">
+            <p className="text-[11px] text-[var(--muted)]/70 leading-tight">
               {pfAdjustmentText}
             </p>
-            <div className="pt-1 text-[10px] text-[#C6CBD9]/50 font-sans">
+            <div className="pt-1 text-[10px] text-[var(--muted)]/50 font-sans">
               SERC Rule: Penalty begins &lt; 0.90; Incentive begins &gt; 0.95 up to unity (1.00).
             </div>
           </div>
@@ -306,20 +306,20 @@ export default function GuardComplianceRulebook() {
       </div>
 
       {/* Banking Forfeiture Countdown Card */}
-      <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <Calendar className="w-8 h-8 text-[#F79050]" />
+          <Calendar className="w-8 h-8 text-[var(--lilac)]" />
           <div>
             <h4 className="text-sm font-bold text-white">RE Banking Year-End Settlement & Forfeiture Rule</h4>
-            <p className="text-xs text-[#C6CBD9]/80 mt-0.5">
+            <p className="text-xs text-[var(--muted)]/80 mt-0.5">
               Unutilized surplus banked energy cannot be carried forward across financial years. Must be settled at APPC rates or forfeited on 31st March.
             </p>
           </div>
         </div>
 
         <div className="text-right shrink-0">
-          <span className="text-[10px] text-[#C6CBD9]/60 uppercase font-mono block">Annual Deadline</span>
-          <span className="text-sm font-mono font-bold text-[#F79050]">31st March (Midnight)</span>
+          <span className="text-[10px] text-[var(--muted)]/60 uppercase font-mono block">Annual Deadline</span>
+          <span className="text-sm font-mono font-bold text-[var(--lilac)]">31st March (Midnight)</span>
         </div>
       </div>
     </div>

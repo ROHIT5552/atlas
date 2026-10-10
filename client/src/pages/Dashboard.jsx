@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { api } from '../services/api';
 import StatusBadge from '../components/StatusBadge';
+import IndiaCoverageMap from '../components/IndiaCoverageMap';
 
 const defaultStats = {
   states_covered: 17,
@@ -36,12 +37,12 @@ const defaultStats = {
 };
 
 const quickStatePills = [
-  { id: 'maharashtra', name: 'Maharashtra', code: 'MH', discom: 'MSEDCL', color: 'border-teal-500/30 text-teal-300 bg-teal-950/20 hover:bg-teal-900/30' },
-  { id: 'gujarat', name: 'Gujarat', code: 'GJ', discom: 'DGVCL / GUVNL', color: 'border-emerald-500/30 text-emerald-300 bg-emerald-950/20 hover:bg-emerald-900/30' },
-  { id: 'rajasthan', name: 'Rajasthan', code: 'RJ', discom: 'JVVNL / RVPNL', color: 'border-amber-500/30 text-amber-300 bg-amber-950/20 hover:bg-amber-900/30' },
-  { id: 'karnataka', name: 'Karnataka', code: 'KA', discom: 'BESCOM / KPTCL', color: 'border-indigo-500/30 text-indigo-300 bg-indigo-950/20 hover:bg-indigo-900/30' },
-  { id: 'tamil-nadu', name: 'Tamil Nadu', code: 'TN', discom: 'TANGEDCO', color: 'border-sky-500/30 text-sky-300 bg-sky-950/20 hover:bg-sky-900/30' },
-  { id: 'telangana', name: 'Telangana', code: 'TS', discom: 'TSSPDCL', color: 'border-cyan-500/30 text-cyan-300 bg-cyan-950/20 hover:bg-cyan-900/30' }
+  { id: 'maharashtra', name: 'Maharashtra', code: 'MH', discom: 'MSEDCL' },
+  { id: 'gujarat', name: 'Gujarat', code: 'GJ', discom: 'DGVCL / GUVNL' },
+  { id: 'rajasthan', name: 'Rajasthan', code: 'RJ', discom: 'JVVNL / RVPNL' },
+  { id: 'karnataka', name: 'Karnataka', code: 'KA', discom: 'BESCOM / KPTCL' },
+  { id: 'tamil-nadu', name: 'Tamil Nadu', code: 'TN', discom: 'TANGEDCO' },
+  { id: 'telangana', name: 'Telangana', code: 'TS', discom: 'TSSPDCL' }
 ];
 
 export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom, clientFacing }) {
@@ -65,13 +66,13 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-12">
       {/* Top Welcome Hero Banner */}
-      <div className="relative rounded-2xl p-6 sm:p-7 overflow-hidden bg-slate-900/80 border border-slate-800 shadow-xl backdrop-blur-sm">
+      <div className="vesper-hero relative rounded-3xl p-6 sm:p-7 overflow-hidden backdrop-blur-sm">
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-teal-500/10 border border-teal-500/25 text-teal-400 text-xs font-semibold tracking-wide">
             <Zap className="w-3.5 h-3.5" />
             <span>Standardized Indian Power Regulatory Intelligence Engine</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 tracking-tight leading-tight">
+          <h1 className="vesper-hero-title text-2xl sm:text-3xl font-medium tracking-tight leading-tight">
             NewRa State & DISCOM Regulatory Library
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -82,7 +83,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
           <div className="pt-2 flex flex-wrap items-center gap-2.5">
             <button
               onClick={() => setActiveTab('explorer')}
-              className="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs shadow-sm shadow-teal-500/20 transition flex items-center gap-2"
+              className="vesper-primary px-4 py-2 rounded-full font-medium text-xs transition flex items-center gap-2"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Launch Regulatory Explorer</span>
@@ -91,14 +92,14 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
 
             <button
               onClick={() => setActiveTab('landed-cost')}
-              className="px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-2"
+              className="vesper-secondary px-4 py-2 rounded-full font-medium text-xs transition flex items-center gap-2"
             >
               <span>LCoP Waterfall Engine</span>
             </button>
 
             <button
               onClick={() => setActiveTab('compare')}
-              className="px-4 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition flex items-center gap-2"
+              className="vesper-secondary px-4 py-2 rounded-full font-medium text-xs transition flex items-center gap-2"
             >
               <span>Compare Jurisdictions</span>
             </button>
@@ -109,7 +110,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
       {/* Primary KPI Metrics Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
         {/* States Covered */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>States</span>
             <MapPin className="w-3.5 h-3.5 text-teal-400" />
@@ -119,7 +120,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         </div>
 
         {/* DISCOMs Covered */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>DISCOMs</span>
             <Building2 className="w-3.5 h-3.5 text-sky-400" />
@@ -129,7 +130,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         </div>
 
         {/* Tariff Schedules */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>Tariffs</span>
             <Receipt className="w-3.5 h-3.5 text-amber-400" />
@@ -139,7 +140,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         </div>
 
         {/* Active Regulations */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>Orders & Acts</span>
             <FileText className="w-3.5 h-3.5 text-indigo-400" />
@@ -149,7 +150,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         </div>
 
         {/* Verified Data % */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>Verified %</span>
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
@@ -159,7 +160,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         </div>
 
         {/* Pending Verification */}
-        <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 shadow-sm space-y-1.5 hover:border-slate-700 transition">
+        <div className="vesper-panel p-4 rounded-2xl space-y-1.5 transition">
           <div className="flex items-center justify-between text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
             <span>Under Review</span>
             <Clock className="w-3.5 h-3.5 text-slate-400" />
@@ -174,7 +175,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
         <div className="flex items-center justify-between">
           <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
             <span>Key State Power Markets</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+            <span className="vesper-live-dot w-1.5 h-1.5 rounded-full" />
           </h3>
           <button
             onClick={() => setActiveTab('states')}
@@ -185,7 +186,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
           </button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+        <div className="vesper-state-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
           {quickStatePills.map((st) => (
             <button
               key={st.id}
@@ -193,25 +194,32 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
                 onSelectState(st.id);
                 setActiveTab('explorer');
               }}
-              className={`p-3 rounded-xl border text-left transition-all hover:scale-[1.01] shadow-sm flex flex-col justify-between ${st.color}`}
+              className="vesper-state-card flex min-w-0 flex-col justify-between p-4 text-left"
             >
-              <div>
-                <div className="text-xs font-bold text-slate-100">{st.name}</div>
-                <div className="text-[11px] opacity-80 mt-0.5 font-medium">{st.discom}</div>
+              <div className="min-w-0 w-full">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="min-w-0 text-xs font-semibold text-[var(--text)]">{st.name}</span>
+                  <span className="shrink-0 rounded-lg border border-[var(--line)] bg-[var(--surface-2)] px-1.5 py-0.5 font-mono text-[9px] text-[var(--lilac)]">
+                    {st.code}
+                  </span>
+                </div>
+                <div className="mt-1.5 truncate text-[11px] text-[var(--muted)]">{st.discom}</div>
               </div>
-              <div className="mt-2.5 text-[9px] uppercase font-bold tracking-wider opacity-80 flex items-center justify-between">
-                <span>Query Profile</span>
-                <ArrowRight className="w-3 h-3" />
+              <div className="mt-4 flex items-center justify-between border-t border-[var(--line)] pt-2.5 text-[9px] font-mono uppercase tracking-[.14em] text-[var(--lilac)]">
+                <span>Query profile</span>
+                <ArrowRight className="h-3.5 w-3.5" />
               </div>
             </button>
           ))}
         </div>
       </div>
 
+      <IndiaCoverageMap onSelectState={onSelectState} />
+
       {/* Recently Updated States & Architecture Callout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* Recently Updated States List */}
-        <div className="lg:col-span-2 rounded-2xl bg-slate-900/70 border border-slate-800 p-5 space-y-3.5 shadow-md">
+        <div className="vesper-panel lg:col-span-2 rounded-3xl p-5 space-y-3.5">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-xs font-bold text-slate-100 uppercase tracking-wider">
@@ -221,7 +229,7 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
                 Overview of latest MYT tariff orders, STU networks, and verification health.
               </p>
             </div>
-            <span className="px-2.5 py-0.5 rounded-lg bg-teal-500/10 border border-teal-500/20 text-[11px] text-teal-400 font-bold">
+            <span className="px-2.5 py-0.5 rounded-full bg-[var(--surface-2)] border border-[var(--line)] text-[9px] font-mono uppercase tracking-[.14em] text-[var(--lilac)] font-medium">
               100% Synced
             </span>
           </div>
@@ -294,5 +302,3 @@ export default function Dashboard({ setActiveTab, onSelectState, onSelectDiscom,
     </div>
   );
 }
-
-

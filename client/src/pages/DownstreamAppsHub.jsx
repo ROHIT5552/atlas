@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Code2,
   Terminal,
@@ -129,26 +129,26 @@ run();`;
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#09193C] via-[#0B1B3D] to-[#07122A] border border-[#2D50A1]/40 shadow-xl">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[var(--surface-1)] via-[var(--surface-1)] to-[var(--bg)] border border-[var(--line)]/40 shadow-xl">
         <div className="flex items-center gap-4">
-          <div className="p-3 rounded-xl bg-[#2D50A1]/30 border border-[#28B8B4]/40 text-[#28B8B4]">
+          <div className="p-3 rounded-xl bg-[var(--surface-2)]/30 border border-[var(--line)]/40 text-[var(--lilac)]">
             <Code2 className="w-7 h-7" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-[#2D50A1]/40 text-[#28B8B4] border border-[#28B8B4]/30 rounded">
+              <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-[var(--surface-2)]/40 text-[var(--lilac)] border border-[var(--line)]/30 rounded">
                 NewRa Core Layer
               </span>
               <h1 className="text-xl font-bold text-white tracking-tight">Downstream Apps API Hub & SDKs</h1>
             </div>
-            <p className="text-xs text-[#C6CBD9]/80 mt-1">
+            <p className="text-xs text-[var(--muted)]/80 mt-1">
               Data contracts, live JSON endpoints, and zero-dependency client SDKs connecting Atlas to the other NewRa applications.
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="px-3 py-1 text-xs font-mono font-bold bg-[#07122A] border border-[#2D50A1]/50 text-[#7CD9D6] rounded-xl">
+          <span className="px-3 py-1 text-xs font-mono font-bold bg-[var(--bg)] border border-[var(--line)]/50 text-[var(--lilac)] rounded-xl">
             API Version: v1
           </span>
         </div>
@@ -162,15 +162,15 @@ run();`;
             onClick={() => setActiveApp(appItem.id)}
             className={`p-3 rounded-xl text-left border transition ${
               activeApp === appItem.id
-                ? 'bg-[#09193C] border-[#28B8B4] shadow-lg shadow-[#28B8B4]/10'
-                : 'bg-[#07122A] border-[#2D50A1]/30 text-[#C6CBD9] hover:border-[#2D50A1]'
+                ? 'bg-[var(--surface-1)] border-[var(--line)] shadow-lg shadow-[#28B8B4]/10'
+                : 'bg-[var(--bg)] border-[var(--line)]/30 text-[var(--muted)] hover:border-[var(--line)]'
             }`}
           >
             <div className="flex justify-between items-center mb-1">
-              <span className="text-[10px] font-bold uppercase text-[#28B8B4]">{appItem.badge}</span>
+              <span className="text-[10px] font-bold uppercase text-[var(--lilac)]">{appItem.badge}</span>
             </div>
             <h3 className="text-xs font-bold text-white">{appItem.name}</h3>
-            <p className="text-[10px] text-[#C6CBD9]/60 truncate mt-0.5">{appItem.tagline}</p>
+            <p className="text-[10px] text-[var(--muted)]/60 truncate mt-0.5">{appItem.tagline}</p>
           </button>
         ))}
       </div>
@@ -179,24 +179,24 @@ run();`;
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Specification (5 Cols) */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4">
+          <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#28B8B4] bg-[#28B8B4]/15 px-2 py-0.5 rounded border border-[#28B8B4]/30">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--lilac)] bg-[var(--violet)]/15 px-2 py-0.5 rounded border border-[var(--line)]/30">
                   {currentApp.badge} Contract
                 </span>
                 <span className="text-xs font-bold text-white">{currentApp.name}</span>
               </div>
               <h2 className="text-base font-bold text-white">{currentApp.tagline}</h2>
-              <p className="text-xs text-[#C6CBD9]/80 mt-1 leading-relaxed">
+              <p className="text-xs text-[var(--muted)]/80 mt-1 leading-relaxed">
                 {currentApp.description}
               </p>
             </div>
 
             {/* Target Endpoint */}
-            <div className="p-3 rounded-xl bg-[#07122A] border border-[#2D50A1]/40 space-y-1">
-              <span className="text-[10px] text-[#C6CBD9]/60 uppercase font-mono block">REST Endpoint</span>
-              <div className="flex items-center justify-between font-mono text-xs text-[#7CD9D6] break-all">
+            <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/40 space-y-1">
+              <span className="text-[10px] text-[var(--muted)]/60 uppercase font-mono block">REST Endpoint</span>
+              <div className="flex items-center justify-between font-mono text-xs text-[var(--lilac)] break-all">
                 <span>{currentApp.endpoint}</span>
               </div>
             </div>
@@ -204,11 +204,11 @@ run();`;
             {/* Code Snippets */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-white block">Client SDK Integration (Node.js & Python)</span>
-              <div className="relative p-3 rounded-xl bg-[#07122A] border border-[#2D50A1]/40 text-xs font-mono text-[#C6CBD9] overflow-x-auto">
+              <div className="relative p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/40 text-xs font-mono text-[var(--muted)] overflow-x-auto">
                 <pre className="text-[11px] leading-relaxed">{getCodeSnippet('python')}</pre>
                 <button
                   onClick={() => handleCopySnippet(getCodeSnippet('python'))}
-                  className="absolute top-2.5 right-2.5 p-1.5 rounded-lg bg-[#09193C] border border-[#2D50A1]/40 text-[#28B8B4] hover:text-white transition"
+                  className="absolute top-2.5 right-2.5 p-1.5 rounded-lg bg-[var(--surface-1)] border border-[var(--line)]/40 text-[var(--lilac)] hover:text-white transition"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
@@ -219,10 +219,10 @@ run();`;
 
         {/* Right Live JSON Payload Preview (7 Cols) */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-3">
-            <div className="flex justify-between items-center border-b border-[#2D50A1]/30 pb-2">
+          <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-3">
+            <div className="flex justify-between items-center border-b border-[var(--line)]/30 pb-2">
               <div className="flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-[#28B8B4]" />
+                <Terminal className="w-4 h-4 text-[var(--lilac)]" />
                 <h3 className="text-xs font-bold uppercase tracking-wider text-white">Live JSON Payload Contract</h3>
               </div>
               <span className="text-[10px] font-mono text-green-400 flex items-center gap-1">
@@ -231,11 +231,11 @@ run();`;
             </div>
 
             {loading ? (
-              <div className="h-96 flex items-center justify-center text-xs text-[#C6CBD9]/60">
+              <div className="h-96 flex items-center justify-center text-xs text-[var(--muted)]/60">
                 Fetching live contract payload...
               </div>
             ) : (
-              <div className="max-h-[500px] overflow-y-auto p-4 rounded-xl bg-[#07122A] border border-[#2D50A1]/30 font-mono text-[11px] text-[#7CD9D6]">
+              <div className="max-h-[500px] overflow-y-auto p-4 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30 font-mono text-[11px] text-[var(--lilac)]">
                 <pre>{JSON.stringify(liveResponse, null, 2)}</pre>
               </div>
             )}

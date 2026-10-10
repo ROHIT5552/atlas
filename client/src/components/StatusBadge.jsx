@@ -32,18 +32,17 @@ export default function StatusBadge({ status, showWarningBanner = false, classNa
 
   return (
     <div className="inline-flex flex-col gap-1.5">
-      <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide border shadow-sm ${badgeStyle} ${className}`}>
+      <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-mono font-medium uppercase tracking-[.12em] border ${badgeStyle} ${className}`}>
         <Icon className="w-3.5 h-3.5" />
         <span>{label}</span>
       </span>
 
       {showWarningBanner && isUnverified && (
-        <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-rose-950/40 border border-rose-800/50 text-[11px] text-rose-300 font-medium">
-          <AlertTriangle className="w-3 h-3 text-rose-400 shrink-0" />
+        <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-[var(--surface-2)] border border-[var(--line)] text-[11px] text-[var(--muted)] font-medium">
+          <AlertTriangle className="w-3 h-3 text-[var(--lilac)] shrink-0" />
           <span>Unverified — Do Not Use for Final Commercial Quotation</span>
         </div>
       )}
     </div>
   );
 }
-

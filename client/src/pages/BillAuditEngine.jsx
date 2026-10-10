@@ -135,19 +135,19 @@ export default function BillAuditEngine() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#09193C] via-[#0B1B3D] to-[#07122A] border border-[#2D50A1]/40 shadow-xl print:hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-[var(--surface-1)] via-[var(--surface-1)] to-[var(--bg)] border border-[var(--line)]/40 shadow-xl print:hidden">
         <div className="flex items-center gap-4">
-          <div className="p-3 rounded-xl bg-[#28B8B4]/20 border border-[#28B8B4]/40 text-[#28B8B4]">
+          <div className="p-3 rounded-xl bg-[var(--violet)]/20 border border-[var(--line)]/40 text-[var(--lilac)]">
             <FileCheck2 className="w-7 h-7" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-[#28B8B4]/20 text-[#28B8B4] border border-[#28B8B4]/30 rounded">
+              <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-[var(--violet)]/20 text-[var(--lilac)] border border-[var(--line)]/30 rounded">
                 Stage 6: Billed Engine
               </span>
               <h1 className="text-xl font-bold text-white tracking-tight">Statutory DISCOM Bill Audit & Overbilling Engine</h1>
             </div>
-            <p className="text-xs text-[#C6CBD9]/80 mt-1">
+            <p className="text-xs text-[var(--muted)]/80 mt-1">
               Reconciles raw electricity bills against gazetted SERC tariff orders to detect utility overbilling, miscalculated demand charges, and wrong PF penalties.
             </p>
           </div>
@@ -157,15 +157,15 @@ export default function BillAuditEngine() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleExportCSV}
-              className="px-3.5 py-2 rounded-xl text-xs font-bold bg-[#07122A] border border-[#2D50A1]/60 text-[#C6CBD9] hover:text-white hover:border-[#28B8B4] transition flex items-center gap-1.5 shadow-sm"
+              className="px-3.5 py-2 rounded-xl text-xs font-bold bg-[var(--bg)] border border-[var(--line)]/60 text-[var(--muted)] hover:text-white hover:border-[var(--line)] transition flex items-center gap-1.5 shadow-sm"
             >
-              <Download className="w-3.5 h-3.5 text-[#28B8B4]" />
+              <Download className="w-3.5 h-3.5 text-[var(--lilac)]" />
               <span>Export CSV</span>
             </button>
             <button
               onClick={handleExportPDF}
               disabled={isExportingPdf}
-              className="px-3.5 py-2 rounded-xl text-xs font-bold bg-[#28B8B4] text-[#09193C] hover:bg-[#7CD9D6] transition flex items-center gap-1.5 shadow-md shadow-[#28B8B4]/20 disabled:opacity-50"
+              className="px-3.5 py-2 rounded-xl text-xs font-bold bg-[var(--violet)] text-[var(--text)] hover:bg-[var(--surface-2)] transition flex items-center gap-1.5 shadow-md shadow-[#28B8B4]/20 disabled:opacity-50"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>{isExportingPdf ? 'Exporting PDF...' : 'Export Audit PDF'}</span>
@@ -178,18 +178,18 @@ export default function BillAuditEngine() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Inputs (4 Cols) */}
         <div className="lg:col-span-4 space-y-4 print:hidden">
-          <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4 shadow-lg">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-[#28B8B4] flex items-center gap-2 border-b border-[#2D50A1]/30 pb-2">
+          <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4 shadow-lg">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-[var(--lilac)] flex items-center gap-2 border-b border-[var(--line)]/30 pb-2">
               <Building2 className="w-4 h-4" /> Billed Invoice Parameters
             </h2>
 
             {/* State */}
             <div>
-              <label className="text-[11px] font-bold text-[#C6CBD9] block mb-1">State Jurisdiction</label>
+              <label className="text-[11px] font-bold text-[var(--muted)] block mb-1">State Jurisdiction</label>
               <select
                 value={selectedState}
                 onChange={(e) => setSelectedState(e.target.value)}
-                className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#28B8B4]"
+                className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[var(--line)]"
               >
                 {states.map(s => (
                   <option key={s.id} value={s.id}>{s.name} ({s.regulator_code})</option>
@@ -199,11 +199,11 @@ export default function BillAuditEngine() {
 
             {/* DISCOM */}
             <div>
-              <label className="text-[11px] font-bold text-[#C6CBD9] block mb-1">Billing Utility DISCOM</label>
+              <label className="text-[11px] font-bold text-[var(--muted)] block mb-1">Billing Utility DISCOM</label>
               <select
                 value={selectedDiscom}
                 onChange={(e) => setSelectedDiscom(e.target.value)}
-                className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#28B8B4]"
+                className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[var(--line)]"
               >
                 {discoms.map(d => (
                   <option key={d.id} value={d.id}>{d.name} ({d.code})</option>
@@ -214,21 +214,21 @@ export default function BillAuditEngine() {
             {/* Contract Demand vs Recorded MD */}
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-[11px] font-bold text-[#C6CBD9] block mb-1">Contract Demand (kVA)</label>
+                <label className="text-[11px] font-bold text-[var(--muted)] block mb-1">Contract Demand (kVA)</label>
                 <input
                   type="number"
                   value={contractDemandKva}
                   onChange={(e) => setContractDemandKva(Number(e.target.value))}
-                  className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-white focus:outline-none focus:border-[#28B8B4]"
+                  className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-white focus:outline-none focus:border-[var(--line)]"
                 />
               </div>
               <div>
-                <label className="text-[11px] font-bold text-[#C6CBD9] block mb-1">Recorded MD (kVA)</label>
+                <label className="text-[11px] font-bold text-[var(--muted)] block mb-1">Recorded MD (kVA)</label>
                 <input
                   type="number"
                   value={recordedMdKva}
                   onChange={(e) => setRecordedMdKva(Number(e.target.value))}
-                  className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-[#F79050] focus:outline-none focus:border-[#28B8B4]"
+                  className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-[var(--lilac)] focus:outline-none focus:border-[var(--line)]"
                 />
               </div>
             </div>
@@ -236,21 +236,21 @@ export default function BillAuditEngine() {
             {/* Billed Units */}
             <div>
               <div className="flex justify-between items-center mb-1">
-                <label className="text-[11px] font-bold text-[#C6CBD9]">Total Energy Consumed (kWh)</label>
-                <span className="text-xs font-mono font-bold text-[#28B8B4]">{billedUnitsKwh.toLocaleString()} units</span>
+                <label className="text-[11px] font-bold text-[var(--muted)]">Total Energy Consumed (kWh)</label>
+                <span className="text-xs font-mono font-bold text-[var(--lilac)]">{billedUnitsKwh.toLocaleString()} units</span>
               </div>
               <input
                 type="number"
                 value={billedUnitsKwh}
                 onChange={(e) => setBilledUnitsKwh(Number(e.target.value))}
-                className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-white focus:outline-none focus:border-[#28B8B4]"
+                className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-1.5 text-xs font-mono font-bold text-white focus:outline-none focus:border-[var(--line)]"
               />
             </div>
 
             {/* Power Factor */}
             <div>
               <div className="flex justify-between items-center mb-1">
-                <label className="text-[11px] font-bold text-[#C6CBD9]">Recorded Power Factor</label>
+                <label className="text-[11px] font-bold text-[var(--muted)]">Recorded Power Factor</label>
                 <span className={`text-xs font-mono font-bold ${pf >= 0.95 ? 'text-green-400' : pf < 0.90 ? 'text-red-400' : 'text-white'}`}>
                   PF {pf}
                 </span>
@@ -262,18 +262,18 @@ export default function BillAuditEngine() {
                 step="0.01"
                 value={pf}
                 onChange={(e) => setPf(Number(e.target.value))}
-                className="w-full accent-[#28B8B4] bg-[#07122A] h-1.5 rounded-lg"
+                className="w-full accent-[#28B8B4] bg-[var(--bg)] h-1.5 rounded-lg"
               />
             </div>
 
             {/* Invoiced Total Amount */}
             <div>
-              <label className="text-[11px] font-bold text-[#C6CBD9] block mb-1">DISCOM Billed Total Amount (₹)</label>
+              <label className="text-[11px] font-bold text-[var(--muted)] block mb-1">DISCOM Billed Total Amount (₹)</label>
               <input
                 type="number"
                 value={billedTotalInr}
                 onChange={(e) => setBilledTotalInr(Number(e.target.value))}
-                className="w-full bg-[#07122A] border border-[#2D50A1]/50 rounded-xl px-3 py-2 text-sm font-mono font-bold text-[#F79050] focus:outline-none focus:border-[#28B8B4]"
+                className="w-full bg-[var(--bg)] border border-[var(--line)]/50 rounded-xl px-3 py-2 text-sm font-mono font-bold text-[var(--lilac)] focus:outline-none focus:border-[var(--line)]"
               />
             </div>
           </div>
@@ -304,15 +304,15 @@ export default function BillAuditEngine() {
                         ? 'DISCOM Overbilling Detected: ₹' + auditResult.audit_summary.discrepancy_amount_inr.toLocaleString() + ' Excess'
                         : 'Bill Verified Statutorily Accurate'}
                     </h2>
-                    <p className="text-xs text-[#C6CBD9]/80 mt-0.5">
+                    <p className="text-xs text-[var(--muted)]/80 mt-0.5">
                       Statutory Order: {auditResult.governing_tariff_order}
                     </p>
                   </div>
                 </div>
 
                 {auditResult.audit_summary.potential_annual_claim_inr > 0 && (
-                  <div className="text-right shrink-0 p-3 rounded-xl bg-[#07122A] border border-red-500/40">
-                    <span className="text-[10px] uppercase font-mono text-[#C6CBD9]/60 block">Annual Refund Claim</span>
+                  <div className="text-right shrink-0 p-3 rounded-xl bg-[var(--bg)] border border-red-500/40">
+                    <span className="text-[10px] uppercase font-mono text-[var(--muted)]/60 block">Annual Refund Claim</span>
                     <span className="text-base font-mono font-bold text-red-400">
                       ₹{(auditResult.audit_summary.potential_annual_claim_inr / 100000).toFixed(2)} Lakhs/yr
                     </span>
@@ -321,12 +321,12 @@ export default function BillAuditEngine() {
               </div>
 
               {/* Line-by-Line Statutory Audit Breakdown */}
-              <div className="p-5 rounded-2xl bg-[#09193C] border border-[#2D50A1]/40 space-y-4">
-                <div className="flex justify-between items-center pb-2 border-b border-[#2D50A1]/30">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#28B8B4]">
+              <div className="p-5 rounded-2xl bg-[var(--surface-1)] border border-[var(--line)]/40 space-y-4">
+                <div className="flex justify-between items-center pb-2 border-b border-[var(--line)]/30">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--lilac)]">
                     Line-by-Line Statutory Bill Reconciliation
                   </h3>
-                  <span className="text-[11px] font-mono text-[#C6CBD9]/60">
+                  <span className="text-[11px] font-mono text-[var(--muted)]/60">
                     Billing Demand: {auditResult.bill_parameters.statutory_billing_demand_kva} kVA
                   </span>
                 </div>
@@ -334,7 +334,7 @@ export default function BillAuditEngine() {
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-xs font-mono">
                     <thead>
-                      <tr className="border-b border-[#2D50A1]/40 text-[#C6CBD9]/60 uppercase text-[10px]">
+                      <tr className="border-b border-[var(--line)]/40 text-[var(--muted)]/60 uppercase text-[10px]">
                         <th className="py-2.5 px-3">Tariff Component</th>
                         <th className="py-2.5 px-3">Statutory Formula / Slab</th>
                         <th className="py-2.5 px-3 text-right">Statutory Amount (₹)</th>
@@ -343,32 +343,32 @@ export default function BillAuditEngine() {
                     </thead>
                     <tbody className="divide-y divide-[#2D50A1]/20">
                       {auditResult.line_item_audit.map((item, idx) => (
-                        <tr key={idx} className="hover:bg-[#0B1B3D]/50 transition">
+                        <tr key={idx} className="hover:bg-[var(--surface-1)]/50 transition">
                           <td className="py-2.5 px-3 font-bold text-white font-sans">{item.item}</td>
-                          <td className="py-2.5 px-3 text-[#C6CBD9]/80 text-[11px]">{item.statutory_rate}</td>
+                          <td className="py-2.5 px-3 text-[var(--muted)]/80 text-[11px]">{item.statutory_rate}</td>
                           <td className="py-2.5 px-3 text-right font-bold text-white">
                             {item.statutory_amount_inr < 0 ? '-' : ''}₹{Math.abs(item.statutory_amount_inr).toLocaleString()}
                           </td>
                           <td className="py-2.5 px-3 text-center">
-                            <span className="px-2 py-0.5 rounded text-[10px] bg-[#28B8B4]/15 text-[#28B8B4] border border-[#28B8B4]/30 font-sans">
+                            <span className="px-2 py-0.5 rounded text-[10px] bg-[var(--violet)]/15 text-[var(--lilac)] border border-[var(--line)]/30 font-sans">
                               {item.status}
                             </span>
                           </td>
                         </tr>
                       ))}
-                      <tr className="bg-[#07122A] font-bold">
+                      <tr className="bg-[var(--bg)] font-bold">
                         <td className="py-3 px-3 text-white font-sans" colSpan={2}>Statutory Mandated Total (Payable by Law)</td>
-                        <td className="py-3 px-3 text-right text-[#28B8B4] text-sm">
+                        <td className="py-3 px-3 text-right text-[var(--lilac)] text-sm">
                           ₹{auditResult.audit_summary.statutory_mandated_total_inr.toLocaleString()}
                         </td>
                         <td className="py-3 px-3 text-center text-[10px] text-green-400 font-sans">CORRECT BASE</td>
                       </tr>
-                      <tr className="bg-[#07122A]/60">
-                        <td className="py-2.5 px-3 text-[#C6CBD9]/80 font-sans" colSpan={2}>Actual Invoiced by DISCOM</td>
+                      <tr className="bg-[var(--bg)]/60">
+                        <td className="py-2.5 px-3 text-[var(--muted)]/80 font-sans" colSpan={2}>Actual Invoiced by DISCOM</td>
                         <td className="py-2.5 px-3 text-right text-white">
                           ₹{auditResult.audit_summary.discom_billed_total_inr.toLocaleString()}
                         </td>
-                        <td className="py-2.5 px-3 text-center text-[10px] text-[#F79050] font-sans">INVOICED</td>
+                        <td className="py-2.5 px-3 text-center text-[10px] text-[var(--lilac)] font-sans">INVOICED</td>
                       </tr>
                     </tbody>
                   </table>
