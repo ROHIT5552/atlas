@@ -4,6 +4,7 @@ import { api } from '../services/api';
 import StatusBadge from '../components/StatusBadge';
 import TodTimeline from '../components/TodTimeline';
 import { exportElementToPDF } from '../utils/pdfExportUtils';
+import { cleanUnit } from '../utils/formatUtils';
 
 export default function DiscomDetail({ discomId, onBack, onQueryProfile }) {
   const [discom, setDiscom] = useState(null);
@@ -171,9 +172,9 @@ export default function DiscomDetail({ discomId, onBack, onQueryProfile }) {
                 <tr key={idx} className="hover:bg-slate-900/50">
                   <td className="px-4 py-3 font-semibold text-white">{t.tariff_category_name}</td>
                   <td className="px-4 py-3 font-mono text-cyan-400">{t.voltage_level}</td>
-                  <td className="px-4 py-3 font-mono font-bold text-white">Rs {t.energy_charge} /{t.energy_charge_unit}</td>
-                  <td className="px-4 py-3 font-mono">Rs {t.demand_charge} /{t.demand_charge_unit}</td>
-                  <td className="px-4 py-3 font-mono text-slate-400">{t.electricity_duty}% + Rs {t.fac_fppas}</td>
+                  <td className="px-4 py-3 font-mono font-bold text-white">₹ {t.energy_charge} / {cleanUnit(t.energy_charge_unit, 'kVAh')}</td>
+                  <td className="px-4 py-3 font-mono">₹ {t.demand_charge} / {cleanUnit(t.demand_charge_unit, 'kVA/mo')}</td>
+                  <td className="px-4 py-3 font-mono text-slate-400">{t.electricity_duty}% + ₹ {t.fac_fppas}</td>
                   <td className="px-4 py-3">
                     <StatusBadge status={t.verification_status} />
                   </td>

@@ -1,7 +1,8 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Receipt, Search, Filter, Layers, Download, Check, FileText } from 'lucide-react';
 import { api } from '../services/api';
 import StatusBadge from '../components/StatusBadge';
+import { cleanUnit } from '../utils/formatUtils';
 
 export default function TariffMaster({ onSelectTariff }) {
   const [tariffs, setTariffs] = useState([]);
@@ -220,13 +221,13 @@ export default function TariffMaster({ onSelectTariff }) {
                       {t.voltage_level}
                     </td>
                     <td className="px-4 py-3 font-mono font-bold text-white">
-                      Rs {t.energy_charge} <span className="text-[10px] text-slate-400">/{t.energy_charge_unit}</span>
+                      ₹ {t.energy_charge} <span className="text-[10px] text-slate-400">/ {cleanUnit(t.energy_charge_unit, 'kVAh')}</span>
                     </td>
                     <td className="px-4 py-3 font-mono">
-                      Rs {t.demand_charge} <span className="text-[10px] text-slate-400">/{t.demand_charge_unit}</span>
+                      ₹ {t.demand_charge} <span className="text-[10px] text-slate-400">/ {cleanUnit(t.demand_charge_unit, 'kVA/mo')}</span>
                     </td>
                     <td className="px-4 py-3 font-mono text-amber-400">
-                      {t.electricity_duty}% + Rs {t.fac_fppas}
+                      {t.electricity_duty}% + ₹ {t.fac_fppas}
                     </td>
                     <td className="px-4 py-3 text-[11px] text-slate-400 max-w-[150px] truncate" title={`${t.source_document} (p. ${t.source_page})`}>
                       {t.source_document}

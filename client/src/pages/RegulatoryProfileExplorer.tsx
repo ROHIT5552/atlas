@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Sparkles,
   MapPin,
@@ -28,6 +28,7 @@ import { api } from '../services/api';
 import StatusBadge from '../components/StatusBadge';
 import TodTimeline from '../components/TodTimeline';
 import ExecutiveDossierModal from '../components/ExecutiveDossierModal';
+import { cleanUnit, formatCurrency, formatRate } from '../utils/formatUtils';
 
 export default function RegulatoryProfileExplorer({ preselectedState, preselectedDiscom }) {
   // Cascading Selector States
@@ -319,12 +320,12 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
               </div>
               <div className="mt-1.5 flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-teal-400 font-mono">
-                  Rs {profile.applicable_tariff?.energy_charge || 'N/A'}
+                  {formatCurrency(profile.applicable_tariff?.energy_charge)}
                 </span>
-                <span className="text-xs text-slate-400">/{profile.applicable_tariff?.energy_charge_unit || 'kVAh'}</span>
+                <span className="text-xs text-slate-400">/ {cleanUnit(profile.applicable_tariff?.energy_charge_unit, 'kVAh')}</span>
               </div>
               <p className="text-[11px] text-slate-400 mt-1 truncate">
-                Duty: {profile.applicable_tariff?.electricity_duty}% | FAC: Rs {profile.applicable_tariff?.fac_fppas}
+                Duty: {profile.applicable_tariff?.electricity_duty}% | FAC: {formatCurrency(profile.applicable_tariff?.fac_fppas)} / {cleanUnit(profile.applicable_tariff?.energy_charge_unit, 'kVAh')}
               </p>
             </div>
 
@@ -335,9 +336,9 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
               </div>
               <div className="mt-1.5 flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-slate-100 font-mono">
-                  Rs {profile.applicable_tariff?.demand_charge || 'N/A'}
+                  {formatCurrency(profile.applicable_tariff?.demand_charge)}
                 </span>
-                <span className="text-xs text-slate-400">/{profile.applicable_tariff?.demand_charge_unit || 'kVA/mo'}</span>
+                <span className="text-xs text-slate-400">/ {cleanUnit(profile.applicable_tariff?.demand_charge_unit, 'kVA/month')}</span>
               </div>
               <p className="text-[11px] text-slate-400 mt-1">
                 Billing Demand: 85% Contract Demand
@@ -352,9 +353,9 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
               </div>
               <div className="mt-1.5 flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-amber-400 font-mono">
-                  Rs {profile.oa_charges_breakdown?.[0]?.css || 'N/A'}
+                  {formatCurrency(profile.oa_charges_breakdown?.[0]?.css)}
                 </span>
-                <span className="text-xs text-slate-400">/kWh</span>
+                <span className="text-xs text-slate-400">/ kWh</span>
               </div>
               <p className="text-[11px] text-slate-400 mt-1">
                 Captive Route: <strong className="text-emerald-400">100% Exempted</strong>
@@ -419,7 +420,7 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
                   <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
                     <div className="text-xs text-slate-400 font-semibold uppercase">Energy Charge</div>
                     <div className="text-xl font-mono font-extrabold text-cyan-400">
-                      Rs {profile.applicable_tariff?.energy_charge} / {profile.applicable_tariff?.energy_charge_unit}
+                      {formatRate(profile.applicable_tariff?.energy_charge, profile.applicable_tariff?.energy_charge_unit, '₹ 0.00 / kVAh')}
                     </div>
                     <p className="text-xs text-slate-500">
                       Standard base variable rate per unit drawn.
@@ -429,7 +430,7 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
                   <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
                     <div className="text-xs text-slate-400 font-semibold uppercase">Demand Charge</div>
                     <div className="text-xl font-mono font-extrabold text-white">
-                      Rs {profile.applicable_tariff?.demand_charge} / {profile.applicable_tariff?.demand_charge_unit}
+                      {formatRate(profile.applicable_tariff?.demand_charge, profile.applicable_tariff?.demand_charge_unit, '₹ 0.00 / kVA/month')}
                     </div>
                     <p className="text-xs text-slate-500">
                       Fixed monthly charge on billing demand.
@@ -439,10 +440,10 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
                   <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
                     <div className="text-xs text-slate-400 font-semibold uppercase">Fuel & Taxes (FAC + ED)</div>
                     <div className="text-xl font-mono font-extrabold text-amber-400">
-                      {profile.applicable_tariff?.electricity_duty}% + Rs {profile.applicable_tariff?.fac_fppas}/u
+                      {profile.applicable_tariff?.electricity_duty}% + {formatCurrency(profile.applicable_tariff?.fac_fppas)} / {cleanUnit(profile.applicable_tariff?.energy_charge_unit, 'kVAh')}
                     </div>
                     <p className="text-xs text-slate-500">
-                      Electricity Duty ({profile.applicable_tariff?.electricity_duty}%) plus FPPAS/FAC.
+                      Electricity Duty ({profile.applicable_tariff?.electricity_duty}%) plus FPPAS/FAC ({formatCurrency(profile.applicable_tariff?.fac_fppas)}/{cleanUnit(profile.applicable_tariff?.energy_charge_unit, 'kVAh')}).
                     </p>
                   </div>
                 </div>
@@ -585,35 +586,37 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
 
                 {/* Charges Table */}
                 <div className="rounded-xl border border-slate-800 overflow-hidden bg-slate-950">
-                  <table className="w-full text-left text-xs">
-                    <thead className="bg-slate-900 text-slate-400 text-[11px] uppercase tracking-wider font-semibold border-b border-slate-800">
-                      <tr>
-                        <th className="px-4 py-3">OA Route</th>
-                        <th className="px-4 py-3">Wheeling</th>
-                        <th className="px-4 py-3">Transmission</th>
-                        <th className="px-4 py-3">CSS (Rs/kWh)</th>
-                        <th className="px-4 py-3">AS (Rs/kWh)</th>
-                        <th className="px-4 py-3">Total Landed Surcharges</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-800 font-medium text-slate-300">
-                      {profile.oa_charges_breakdown?.map((charge, cIdx) => {
-                        const totalSurcharges = Number((charge.css + charge.additional_surcharge).toFixed(2));
-                        return (
-                          <tr key={cIdx} className="hover:bg-slate-900/50">
-                            <td className="px-4 py-3 font-semibold text-white">{charge.oa_type}</td>
-                            <td className="px-4 py-3 font-mono">Rs {charge.wheeling_charge} / kWh</td>
-                            <td className="px-4 py-3 font-mono">Rs {charge.transmission_charge} / MW/day</td>
-                            <td className="px-4 py-3 font-mono text-amber-400">Rs {charge.css}</td>
-                            <td className="px-4 py-3 font-mono text-purple-400">Rs {charge.additional_surcharge}</td>
-                            <td className="px-4 py-3 font-mono font-bold text-cyan-400">
-                              Rs {totalSurcharges} / kWh
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
+                  <div className="overflow-x-auto w-full">
+                    <table className="w-full text-left text-xs min-w-[600px]">
+                      <thead className="bg-slate-900 text-slate-400 text-[11px] uppercase tracking-wider font-semibold border-b border-slate-800">
+                        <tr>
+                          <th className="px-4 py-3">OA Route</th>
+                          <th className="px-4 py-3">Wheeling</th>
+                          <th className="px-4 py-3">Transmission</th>
+                          <th className="px-4 py-3">CSS (₹/kWh)</th>
+                          <th className="px-4 py-3">AS (₹/kWh)</th>
+                          <th className="px-4 py-3">Total Landed Surcharges</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-800 font-medium text-slate-300">
+                        {profile.oa_charges_breakdown?.map((charge, cIdx) => {
+                          const totalSurcharges = Number((charge.css + charge.additional_surcharge).toFixed(2));
+                          return (
+                            <tr key={cIdx} className="hover:bg-slate-900/50">
+                              <td className="px-4 py-3 font-semibold text-white">{charge.oa_type}</td>
+                              <td className="px-4 py-3 font-mono">₹ {charge.wheeling_charge} / kWh</td>
+                              <td className="px-4 py-3 font-mono">₹ {charge.transmission_charge} / MW/day</td>
+                              <td className="px-4 py-3 font-mono text-amber-400">₹ {charge.css} / kWh</td>
+                              <td className="px-4 py-3 font-mono text-purple-400">₹ {charge.additional_surcharge} / kWh</td>
+                              <td className="px-4 py-3 font-mono font-bold text-cyan-400">
+                                ₹ {totalSurcharges} / kWh
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
 
                 {/* Technical Losses by Voltage */}

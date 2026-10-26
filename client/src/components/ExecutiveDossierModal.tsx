@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Printer, Download, Copy, Check, ShieldCheck } from 'lucide-react';
 import StatusBadge from './StatusBadge';
 import { exportElementToPDF } from '../utils/pdfExportUtils';
+import { cleanUnit } from '../utils/formatUtils';
 
 export interface ExecutiveDossierModalProps {
   isOpen: boolean;
@@ -57,14 +58,14 @@ Date of Generation: ${new Date().toLocaleDateString('en-IN')}
 ## 2. Retail Tariff & Demand Charges
 - Consumer Category: ${tariff?.tariff_category_name}
 - Voltage Level: ${voltageLevel}
-- Base Energy Charge: Rs ${tariff?.energy_charge} / ${tariff?.energy_charge_unit}
-- Demand Charge: Rs ${tariff?.demand_charge} / ${tariff?.demand_charge_unit}
-- Electricity Duty: ${tariff?.electricity_duty}% | FAC: Rs ${tariff?.fac_fppas}/kWh
+- Base Energy Charge: ₹ ${tariff?.energy_charge} / ${cleanUnit(tariff?.energy_charge_unit, 'kVAh')}
+- Demand Charge: ₹ ${tariff?.demand_charge} / ${cleanUnit(tariff?.demand_charge_unit, 'kVA/month')}
+- Electricity Duty: ${tariff?.electricity_duty}% | FAC: ₹ ${tariff?.fac_fppas}/kWh
 
 ## 3. Open Access & Grid Surcharges
-- Wheeling Charge: Rs ${profile.oa_charges_breakdown?.[0]?.wheeling_charge}/kWh
-- Cross Subsidy Surcharge (CSS): Rs ${profile.oa_charges_breakdown?.[0]?.css}/kWh (Captive: 100% EXEMPT)
-- Additional Surcharge (AS): Rs ${profile.oa_charges_breakdown?.[0]?.additional_surcharge}/kWh (Captive: 100% EXEMPT)
+- Wheeling Charge: ₹ ${profile.oa_charges_breakdown?.[0]?.wheeling_charge}/kWh
+- Cross Subsidy Surcharge (CSS): ₹ ${profile.oa_charges_breakdown?.[0]?.css}/kWh (Captive: 100% EXEMPT)
+- Additional Surcharge (AS): ₹ ${profile.oa_charges_breakdown?.[0]?.additional_surcharge}/kWh (Captive: 100% EXEMPT)
 - Technical Grid Losses (${voltageLevel}): ${losses?.total_technical_loss_pct}% (Tx: ${losses?.transmission_loss_pct}%, Wh: ${losses?.wheeling_loss_pct}%)
 
 ## 4. Renewable Energy Banking & Settlement
@@ -157,11 +158,11 @@ Date of Generation: ${new Date().toLocaleDateString('en-IN')}
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Energy Charge</span>
-                <div className="font-bold text-[var(--lilac)] font-mono">Rs {tariff?.energy_charge}/{tariff?.energy_charge_unit}</div>
+                <div className="font-bold text-[var(--lilac)] font-mono">₹ {tariff?.energy_charge} / {cleanUnit(tariff?.energy_charge_unit, 'kVAh')}</div>
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Demand Charge</span>
-                <div className="font-bold text-white font-mono">Rs {tariff?.demand_charge}/{tariff?.demand_charge_unit}</div>
+                <div className="font-bold text-white font-mono">₹ {tariff?.demand_charge} / {cleanUnit(tariff?.demand_charge_unit, 'kVA/month')}</div>
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Electricity Duty</span>
@@ -178,15 +179,15 @@ Date of Generation: ${new Date().toLocaleDateString('en-IN')}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Wheeling Charge</span>
-                <div className="font-bold text-white font-mono">Rs {profile.oa_charges_breakdown?.[0]?.wheeling_charge}/kWh</div>
+                <div className="font-bold text-white font-mono">₹ {profile.oa_charges_breakdown?.[0]?.wheeling_charge} / kWh</div>
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Cross Subsidy (CSS)</span>
-                <div className="font-bold text-[var(--lilac)] font-mono">Rs {profile.oa_charges_breakdown?.[0]?.css}/kWh</div>
+                <div className="font-bold text-[var(--lilac)] font-mono">₹ {profile.oa_charges_breakdown?.[0]?.css} / kWh</div>
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Additional Surcharge (AS)</span>
-                <div className="font-bold text-[var(--lilac)] font-mono">Rs {profile.oa_charges_breakdown?.[0]?.additional_surcharge}/kWh</div>
+                <div className="font-bold text-[var(--lilac)] font-mono">₹ {profile.oa_charges_breakdown?.[0]?.additional_surcharge} / kWh</div>
               </div>
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--line)]/30">
                 <span className="text-[10px] text-[var(--muted)]">Total Technical Loss</span>

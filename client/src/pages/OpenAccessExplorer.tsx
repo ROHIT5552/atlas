@@ -152,34 +152,36 @@ export default function OpenAccessExplorer() {
             </div>
 
             <div className="rounded-xl border border-slate-800 overflow-hidden bg-slate-950">
-              <table className="w-full text-left text-xs">
-                <thead className="bg-slate-900 text-slate-400 text-[11px] uppercase tracking-wider font-semibold border-b border-slate-800">
-                  <tr>
-                    <th className="px-4 py-3">DISCOM / Utility</th>
-                    <th className="px-4 py-3">OA Route Type</th>
-                    <th className="px-4 py-3">Wheeling</th>
-                    <th className="px-4 py-3">Transmission</th>
-                    <th className="px-4 py-3">Cross Subsidy (CSS)</th>
-                    <th className="px-4 py-3">Additional Surcharge</th>
-                    <th className="px-4 py-3">Status</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800 text-slate-300 font-medium">
-                  {oaCharges.map((ch, idx) => (
-                    <tr key={idx} className="hover:bg-slate-900/50">
-                      <td className="px-4 py-3 font-bold text-white uppercase">{ch.discom_id}</td>
-                      <td className="px-4 py-3 font-semibold text-cyan-300">{ch.oa_type}</td>
-                      <td className="px-4 py-3 font-mono">Rs {ch.wheeling_charge} / kWh</td>
-                      <td className="px-4 py-3 font-mono">Rs {ch.transmission_charge} / MW/day</td>
-                      <td className="px-4 py-3 font-mono text-amber-400">Rs {ch.css} / kWh</td>
-                      <td className="px-4 py-3 font-mono text-purple-400">Rs {ch.additional_surcharge} / kWh</td>
-                      <td className="px-4 py-3">
-                        <StatusBadge status={ch.verification_status} />
-                      </td>
+              <div className="overflow-x-auto w-full">
+                <table className="w-full text-left text-xs min-w-[640px]">
+                  <thead className="bg-slate-900 text-slate-400 text-[11px] uppercase tracking-wider font-semibold border-b border-slate-800">
+                    <tr>
+                      <th className="px-4 py-3">DISCOM / Utility</th>
+                      <th className="px-4 py-3">OA Route Type</th>
+                      <th className="px-4 py-3">Wheeling</th>
+                      <th className="px-4 py-3">Transmission</th>
+                      <th className="px-4 py-3">Cross Subsidy (CSS)</th>
+                      <th className="px-4 py-3">Additional Surcharge</th>
+                      <th className="px-4 py-3">Status</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800 text-slate-300 font-medium">
+                    {oaCharges.map((ch, idx) => (
+                      <tr key={idx} className="hover:bg-slate-900/50">
+                        <td className="px-4 py-3 font-bold text-white uppercase">{ch.discom_id}</td>
+                        <td className="px-4 py-3 font-semibold text-cyan-300">{ch.oa_type}</td>
+                        <td className="px-4 py-3 font-mono">₹ {ch.wheeling_charge} / kWh</td>
+                        <td className="px-4 py-3 font-mono">₹ {ch.transmission_charge} / MW/day</td>
+                        <td className="px-4 py-3 font-mono text-amber-400">₹ {ch.css} / kWh</td>
+                        <td className="px-4 py-3 font-mono text-purple-400">₹ {ch.additional_surcharge} / kWh</td>
+                        <td className="px-4 py-3">
+                          <StatusBadge status={ch.verification_status} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
 

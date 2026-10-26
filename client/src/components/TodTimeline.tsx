@@ -88,7 +88,7 @@ export default function TodTimeline({ todProfile, baseEnergyRate = 7.50 }: TodTi
           <div className="text-left">
             <div className="text-[10px] uppercase font-bold text-slate-400">Rate Delta</div>
             <div className={`text-sm font-mono font-bold ${activeSlot?.rate_delta > 0 ? 'text-rose-400' : activeSlot?.rate_delta < 0 ? 'text-emerald-400' : 'text-slate-300'}`}>
-              {activeSlot?.rate_delta > 0 ? `+Rs ${activeSlot.rate_delta.toFixed(2)}` : activeSlot?.rate_delta < 0 ? `-Rs ${Math.abs(activeSlot.rate_delta).toFixed(2)}` : 'Flat Rate'}
+              {activeSlot?.rate_delta > 0 ? `+₹ ${activeSlot.rate_delta.toFixed(2)}/kWh` : activeSlot?.rate_delta < 0 ? `-₹ ${Math.abs(activeSlot.rate_delta).toFixed(2)}/kWh` : 'Flat Rate'}
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function TodTimeline({ todProfile, baseEnergyRate = 7.50 }: TodTi
             <div className="text-right">
               <div className="text-[10px] uppercase font-bold text-slate-500">Tariff Delta</div>
               <div className={`text-sm sm:text-base font-bold font-mono ${activeSlot.rate_delta > 0 ? 'text-rose-400' : activeSlot.rate_delta < 0 ? 'text-emerald-400' : 'text-slate-300'}`}>
-                {activeSlot.rate_delta > 0 ? `+ Rs ${activeSlot.rate_delta.toFixed(2)}/kWh` : activeSlot.rate_delta < 0 ? `- Rs ${Math.abs(activeSlot.rate_delta).toFixed(2)}/kWh` : 'Rs 0.00 (Base)'}
+                {activeSlot.rate_delta > 0 ? `+ ₹ ${activeSlot.rate_delta.toFixed(2)} / kWh` : activeSlot.rate_delta < 0 ? `- ₹ ${Math.abs(activeSlot.rate_delta).toFixed(2)} / kWh` : '₹ 0.00 (Base)'}
               </div>
             </div>
 
@@ -196,7 +196,7 @@ export default function TodTimeline({ todProfile, baseEnergyRate = 7.50 }: TodTi
               <div className="text-right pl-4 border-l border-[var(--line)]">
                 <div className="text-[10px] uppercase font-bold text-slate-500">Net Energy Rate</div>
                 <div className="text-sm sm:text-base font-bold font-mono text-[var(--lilac)]">
-                  Rs {effectiveRate} / kVAh
+                  ₹ {effectiveRate} / kVAh
                 </div>
               </div>
             )}
@@ -213,7 +213,7 @@ export default function TodTimeline({ todProfile, baseEnergyRate = 7.50 }: TodTi
               <th className="px-4 py-3">Slot Name</th>
               <th className="px-4 py-3">Time Window</th>
               <th className="px-4 py-3">Type</th>
-              <th className="px-4 py-3 text-right">Tariff Delta (Rs/kWh)</th>
+              <th className="px-4 py-3 text-right">Tariff Delta (₹/kWh)</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--line)]/50 font-medium">
