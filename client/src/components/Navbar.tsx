@@ -153,19 +153,6 @@ export default function Navbar({
             <span>Explorer</span>
           </button>
 
-          {/* Standalone Feature Previews Link (New Features Preview) */}
-          <a
-            href="/preview.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Open Interactive Feature Previews"
-            aria-label="Interactive Feature Previews"
-            className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-display font-semibold text-[var(--teal-accent)] hover:text-white bg-[var(--surface-2)] border border-[var(--border-card)] hover:border-[var(--teal-accent)] transition-all"
-          >
-            <Sparkles className="w-3 h-3 text-[var(--teal-accent)]" />
-            <span>Feature Previews</span>
-          </a>
-
           {/* Quick Action: API Docs */}
           <button
             onClick={() => setActiveTab('api-docs')}
