@@ -115,7 +115,7 @@ export default function CaptiveExplorer() {
                 <span className="px-2.5 py-1 rounded bg-emerald-900/60 text-emerald-400 text-xs font-bold uppercase">
                   Ownership Test (Rule 3.1.a)
                 </span>
-                <span className="text-2xl font-extrabold font-mono text-emerald-400">â‰¥ 26%</span>
+                <span className="text-2xl font-extrabold font-mono text-emerald-400">≥ 26%</span>
               </div>
               <h3 className="text-base font-bold text-white">Equity Share Capital & Voting Rights</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
@@ -129,7 +129,7 @@ export default function CaptiveExplorer() {
                 <span className="px-2.5 py-1 rounded bg-cyan-900/60 text-cyan-400 text-xs font-bold uppercase">
                   Consumption Test (Rule 3.1.b)
                 </span>
-                <span className="text-2xl font-extrabold font-mono text-cyan-400">â‰¥ 51%</span>
+                <span className="text-2xl font-extrabold font-mono text-cyan-400">≥ 51%</span>
               </div>
               <h3 className="text-base font-bold text-white">Annual Proportional Energy Drawal</h3>
               <p className="text-xs text-slate-300 leading-relaxed">

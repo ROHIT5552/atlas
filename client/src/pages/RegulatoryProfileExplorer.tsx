@@ -202,7 +202,7 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
             Interactive Cascading Selector
           </span>
           <span className="text-xs text-slate-400 font-mono">
-            State â†’ DISCOM â†’ Category â†’ Voltage â†’ FY
+            State → DISCOM → Category → Voltage → FY
           </span>
         </div>
 

@@ -1,21 +1,22 @@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+export interface PDFExportOptions {
+  elementId: string;
+  fileName?: string;
+  reportTitle?: string;
+  entityName?: string;
+}
+
 /**
  * Institutional High-Resolution Multi-Page PDF Exporter for NewRa Atlas
- * Features:
- * - Smart page rendering with safe margins preventing sliced text/table rows
- * - Branded NewRa Midnight top bar & institutional running header
- * - Institutional footer with dynamic page numbering (Page X of Y) and timestamps
- * - Automatic hiding of interactive controls (buttons, sliders, dropdowns)
- * - Graceful fallback to browser print dialog on canvas failure
  */
 export async function exportElementToPDF({
   elementId,
   fileName = 'NewRa-Atlas-Report.pdf',
   reportTitle = 'NewRa Atlas Statutory Report',
   entityName = 'Entity'
-}) {
+}: PDFExportOptions): Promise<boolean> {
   const element = document.getElementById(elementId);
   if (!element) {
     console.warn(`Element with id ${elementId} not found, invoking browser print fallback.`);
@@ -40,8 +41,8 @@ export async function exportElementToPDF({
         if (clonedElement) {
           // Hide interactive buttons, sliders, and form selectors in the print PDF
           const hideInPdf = clonedElement.querySelectorAll('.no-print, button, input[type="range"]');
-          hideInPdf.forEach(el => {
-            el.style.display = 'none';
+          hideInPdf.forEach((el) => {
+            (el as HTMLElement).style.display = 'none';
           });
         }
       }
@@ -106,13 +107,15 @@ export async function exportElementToPDF({
       pageCanvas.height = Math.max(1, sourceYHeight);
       const ctx = pageCanvas.getContext('2d');
 
-      ctx.fillStyle = '#07122A';
-      ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
-      ctx.drawImage(
-        canvas,
-        0, sourceYStart, canvasWidth, sourceYHeight,
-        0, 0, canvasWidth, sourceYHeight
-      );
+      if (ctx) {
+        ctx.fillStyle = '#07122A';
+        ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+        ctx.drawImage(
+          canvas,
+          0, sourceYStart, canvasWidth, sourceYHeight,
+          0, 0, canvasWidth, sourceYHeight
+        );
+      }
 
       const sliceData = pageCanvas.toDataURL('image/png');
       const renderHeight = (sourceYHeight * contentWidth) / canvasWidth;
@@ -148,13 +151,13 @@ export async function exportElementToPDF({
 /**
  * Backwards-compatible alias for exportComponentAsPDF
  */
-export async function exportComponentAsPDF(elementId, fileName) {
+export async function exportComponentAsPDF(elementId: string, fileName?: string): Promise<boolean> {
   return exportElementToPDF({ elementId, fileName });
 }
 
 /**
  * Direct print trigger for native Print-to-PDF
  */
-export function triggerNativePrint() {
+export function triggerNativePrint(): void {
   window.print();
 }

@@ -254,7 +254,7 @@ export default function BankingExplorer() {
               <div className="p-4 rounded-2xl bg-[var(--bg)] border border-[var(--line)]/40 space-y-1">
                 <span className="text-[10px] uppercase font-bold text-[var(--muted)]">1. Direct Self-Consumption</span>
                 <div className="text-xl font-extrabold font-mono text-white">{directConsumptionMwh.toFixed(1)} MWh</div>
-                <p className="text-[11px] text-[var(--lilac)] font-bold">â‚¹{(directSavingsRs / 100000).toFixed(2)} Lakhs Saved</p>
+                <p className="text-[11px] text-[var(--lilac)] font-bold">₹{(directSavingsRs / 100000).toFixed(2)} Lakhs Saved</p>
               </div>
 
               {/* Gross Surplus Banked */}
@@ -274,7 +274,7 @@ export default function BankingExplorer() {
               {/* Net Commercial Benefit */}
               <div className="p-4 rounded-2xl bg-gradient-to-tr from-[var(--surface-2)]/30 to-[var(--violet)]/20 border border-[var(--line)]/50 space-y-1">
                 <span className="text-[10px] uppercase font-extrabold text-[var(--lilac)]">4. Total Commercial Value</span>
-                <div className="text-2xl font-extrabold font-mono text-white">â‚¹{(totalCommercialBenefitRs / 100000).toFixed(2)} L</div>
+                <div className="text-2xl font-extrabold font-mono text-white">₹{(totalCommercialBenefitRs / 100000).toFixed(2)} L</div>
                 <p className="text-[11px] text-[var(--lilac)] font-bold">Monthly Combined Benefit</p>
               </div>
             </div>

@@ -1,8 +1,8 @@
-﻿/**
+/**
  * Utility functions for exporting NewRa Atlas regulatory data to CSV / Excel spreadsheets.
  */
 
-export function downloadCSV(csvContent, fileName = 'newra-atlas-export.csv') {
+export function downloadCSV(csvContent: string, fileName: string = 'newra-atlas-export.csv'): void {
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
   const link = document.createElement('a');
   const url = URL.createObjectURL(blob);
@@ -14,7 +14,7 @@ export function downloadCSV(csvContent, fileName = 'newra-atlas-export.csv') {
   document.body.removeChild(link);
 }
 
-export function exportPassportToCSV(passport) {
+export function exportPassportToCSV(passport: any): void {
   if (!passport) return;
 
   const rows = [

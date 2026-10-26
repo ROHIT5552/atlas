@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import GlobalSearchModal from './components/GlobalSearchModal';
 import ErrorBoundary from './components/ErrorBoundary';
-
+import { TabId, SearchResultItem } from './types';
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -35,23 +35,21 @@ import CaptiveStructuringEngine from './pages/CaptiveStructuringEngine';
 import SettlementWaterfallEngine from './pages/SettlementWaterfallEngine';
 import RegulatoryChangePropagator from './pages/RegulatoryChangePropagator';
 
-
-
-
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [clientFacing, setClientFacing] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabId>('dashboard');
+  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [clientFacing, setClientFacing] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   // Selected State / DISCOM query contexts for smooth drilldown
-  const [selectedStateId, setSelectedStateId] = useState('maharashtra');
-  const [selectedDiscomId, setSelectedDiscomId] = useState('msedcl');
-  const [detailStateId, setDetailStateId] = useState(null);
-  const [detailDiscomId, setDetailDiscomId] = useState(null);
+  const [selectedStateId, setSelectedStateId] = useState<string>('maharashtra');
+  const [selectedDiscomId, setSelectedDiscomId] = useState<string>('msedcl');
+  const [detailStateId, setDetailStateId] = useState<string | null>(null);
+  const [detailDiscomId, setDetailDiscomId] = useState<string | null>(null);
 
   // Global keyboard shortcut: Ctrl+K or Cmd+K
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         setIsSearchOpen((prev) => !prev);
@@ -61,7 +59,7 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSelectSearchResult = (item) => {
+  const handleSelectSearchResult = (item: SearchResultItem) => {
     if (item.type === 'State') {
       setSelectedStateId(item.id);
       setActiveTab('explorer');
@@ -77,29 +75,29 @@ export default function App() {
     }
   };
 
-  const handleOpenStateDetail = (stId) => {
+  const handleOpenStateDetail = (stId: string) => {
     setDetailStateId(stId);
     setActiveTab('state-detail');
   };
 
-  const handleOpenDiscomDetail = (discId) => {
+  const handleOpenDiscomDetail = (discId: string) => {
     setDetailDiscomId(discId);
     setActiveTab('discom-detail');
   };
 
-  const handleQueryState = (stId) => {
+  const handleQueryState = (stId: string) => {
     setSelectedStateId(stId);
     setActiveTab('explorer');
   };
 
-  const handleQueryDiscom = (stId, discId) => {
+  const handleQueryDiscom = (stId?: string, discId?: string) => {
     if (stId) setSelectedStateId(stId);
     if (discId) setSelectedDiscomId(discId);
     setActiveTab('explorer');
   };
 
   return (
-    <div className="vesper-app flex h-screen flex-col overflow-hidden text-[var(--text)] selection:bg-[var(--violet)]/30 selection:text-[var(--lilac)]">
+    <div className="vesper-app flex h-screen flex-col overflow-hidden text-[var(--text)] selection:bg-[var(--violet)]/30 selection:text-[var(--lilac)] bg-[var(--bg)]">
       {/* Top Fixed Header */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -107,25 +105,32 @@ export default function App() {
         setActiveTab={setActiveTab}
         clientFacing={clientFacing}
         setClientFacing={setClientFacing}
+        onToggleMobileMenu={() => setIsMobileMenuOpen((prev) => !prev)}
+        isMobileMenuOpen={isMobileMenuOpen}
       />
 
       {/* Main Layout Body */}
-      <div className="vesper-app-body flex min-h-0 flex-1 overflow-hidden">
-        {/* Left Sidebar */}
-        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div className="vesper-app-body relative flex min-h-0 flex-1 overflow-hidden">
+        {/* Left Sidebar (Desktop docked + Mobile slide-over drawer) */}
+        <Sidebar
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
 
         {/* Dynamic Page Main Content */}
-        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto p-3 sm:p-5 lg:p-6 xl:p-8">
           <ErrorBoundary>
             {activeTab === 'dashboard' && (
               <Dashboard
                 setActiveTab={setActiveTab}
                 clientFacing={clientFacing}
-                onSelectState={(stId) => {
+                onSelectState={(stId: string) => {
                   setSelectedStateId(stId);
                   setActiveTab('explorer');
                 }}
-                onSelectDiscom={(discId) => {
+                onSelectDiscom={(discId: string) => {
                   setSelectedDiscomId(discId);
                   setActiveTab('explorer');
                 }}
@@ -165,19 +170,17 @@ export default function App() {
             {activeTab === 'change-propagator' && <RegulatoryChangePropagator />}
 
             {activeTab === 'states' && (
-
               <StateMaster
                 onSelectState={handleQueryState}
                 onOpenDetail={handleOpenStateDetail}
               />
             )}
 
-
             {activeTab === 'state-detail' && (
               <StateDetail
                 stateId={detailStateId || selectedStateId}
                 onBack={() => setActiveTab('states')}
-                onSelectDiscom={(discId) => {
+                onSelectDiscom={(discId: string) => {
                   setSelectedDiscomId(discId);
                   setActiveTab('explorer');
                 }}
@@ -187,7 +190,7 @@ export default function App() {
 
             {activeTab === 'discoms' && (
               <DiscomMaster
-                onSelectDiscom={(discId) => {
+                onSelectDiscom={(discId: string) => {
                   setSelectedDiscomId(discId);
                   setActiveTab('explorer');
                 }}
@@ -205,7 +208,7 @@ export default function App() {
 
             {activeTab === 'tariffs' && (
               <TariffMaster
-                onSelectTariff={(tariff) => {
+                onSelectTariff={(tariff: any) => {
                   setSelectedStateId(tariff.state_id);
                   setSelectedDiscomId(tariff.discom_id);
                   setActiveTab('explorer');
@@ -234,7 +237,6 @@ export default function App() {
             {activeTab === 'api-docs' && <ApiDocs />}
           </ErrorBoundary>
         </main>
-
       </div>
 
       {/* Global Search Dialog Modal (Ctrl + K) */}

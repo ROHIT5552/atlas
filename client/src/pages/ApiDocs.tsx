@@ -94,7 +94,7 @@ print(f"Wheeling Charge: Rs {profile['oa_charges_breakdown'][0]['wheeling_charge
 
         <div className="flex items-center gap-2">
           <span className="px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-800/60 text-xs font-mono text-emerald-400 font-bold">
-            REST v1.0 â€¢ Ready for Production
+            REST v1.0 • Ready for Production
           </span>
         </div>
       </div>

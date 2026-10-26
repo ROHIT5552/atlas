@@ -1,0 +1,209 @@
+================================================================================
+NEWRA ATLAS: UNIQUE FEATURE & DESIGN ENHANCEMENT PROPOSALS
+Document Type: Implementation Roadmap & Template Specifications
+Target Project: Atlas (Central Regulatory & Tariff Intelligence SSoT)
+Status: Proposal & Architecture Design (Pending User Selection)
+================================================================================
+
+EXECUTIVE OVERVIEW:
+The following document outlines 10 high-impact, institutional-grade visual designs
+and functional engines proposed for NewRa Atlas. These features build directly upon
+the existing India Coverage Map philosophy—turning complex Indian electricity 
+regulations, tariff schedules, Open Access economics, and grid codes into stunning,
+interactive, and indispensable analytical tools for RE developers, corporate consumers,
+and power traders.
+
+--------------------------------------------------------------------------------
+TEMPLATE FORMAT: FEATURE SPECIFICATIONS
+--------------------------------------------------------------------------------
+
+[FEATURE 01] BHARAT INTER-STATE TRANSMISSION & LOSS TOPOLOGY VISUALIZER
+--------------------------------------------------------------------------------
+Category: Interactive Visual Mapping & Grid Economics
+Inspiration: Enhancing the India Coverage Map into a multi-state wheeling router
+Concept:
+  - An interactive national transmission grid map showing Inter-State (ISTS) and
+    Intra-State (InSTS) transmission corridors connecting RE surplus states 
+    (Rajasthan, Gujarat, Karnataka, Tamil Nadu) to heavy load center states 
+    (Maharashtra, Haryana, Uttar Pradesh, West Bengal).
+Key Capabilities:
+  - Origin-to-Destination Path Router: Click "Generator State" (e.g., Rajasthan) and 
+    "Consumer State" (e.g., Maharashtra).
+  - Automated Corridor Loss Gross-Up: Instantly calculates Northern Region (NR) ISTS 
+    Loss + Western Region (WR) ISTS Loss + Maharashtra STU Transmission Loss + 
+    MSEDCL Distribution Wheeling Loss.
+  - ISTS Waiver Engine: Shows waiver eligibility (MoP 25-year 100% waiver rules vs 
+    phased 25%/50% trajectory based on COD date).
+  - Visual Design: Animated glowing energy particle lines traveling along state borders,
+    hoverable substations (765 kV / 400 kV PGCIL nodes), and clean summary telemetry pill.
+
+
+[FEATURE 02] 96-BLOCK TOD & DISPATCH ARBITRAGE DYNAMIC HEATMAP
+--------------------------------------------------------------------------------
+Category: Time-of-Day (TOD) Visual Intelligence & Scheduling
+Inspiration: 15-minute Indian Grid Code (IEGC) Block Architecture
+Concept:
+  - A 24-hour, 96-block chromatic matrix comparing RE generation curves 
+    (Solar bell curve / Wind evening peak) against state-specific TOD tariff bands.
+Key Capabilities:
+  - Visual 96-block chromatic heatmap with time on X-axis (00:00 to 24:00 in 15-min blocks) 
+    and energy tariff delta on color spectrum (Deep Emerald for -20% rebate to Crimson 
+    for +25% peak surcharge).
+  - Commercial Arbitrage Calculator: Drag a typical 10 MW Solar generation profile 
+    over the blocks to calculate:
+      * Direct Consumption Value (Rs)
+      * Night Rebate Opportunity (Shifting load into off-peak)
+      * Banking Vulnerability (Peak-hour drawal restriction violations)
+  - DSM Penalty Safe Corridor: Displays CERC/SERC Deviation Settlement Mechanism (DSM) 
+    frequency bands (49.90 - 50.05 Hz) and financial penalty exposure.
+
+
+[FEATURE 03] INTERACTIVE 26/51 CAPTIVE EQUITY & POWER-FLOW ARCHITECT
+--------------------------------------------------------------------------------
+Category: Statutory Compliance & Corporate Structuring
+Inspiration: Electricity Rules 2005 Rule 3 & Supreme Court Landmark Precedents
+Concept:
+  - A visual node canvas for modeling Special Purpose Vehicle (SPV) equity holding 
+    and proportional power consumption for Group Captive solar/wind parks.
+Key Capabilities:
+  - Interactive ownership slider: Generator (Lead Developer) equity vs Captive 
+    Users (User A, User B, User C) equity.
+  - Real-time Statutory Compliance Gauges:
+      * Ownership Gauge: Checks "Total User Equity >= 26% with voting rights"
+      * Consumption Gauge: Checks "Total Annual User Offtake >= 51% of generated power"
+      * Proportionality Rule Gauge: Validates consumption matches equity within +/- 10%
+  - Exemption Financial Value: Displays live savings from 100% exemption on CSS 
+    (Cross-Subsidy Surcharge) and Additional Surcharge (AS), showing exact Rs Crores 
+    saved vs risk of disqualification.
+
+
+[FEATURE 04] MULTI-STATE REGULATORY RADAR & COMPARATOR ARENA
+--------------------------------------------------------------------------------
+Category: Comparative Intelligence & Market Attractiveness
+Inspiration: Multi-dimensional radar benchmarking for RE deployment
+Concept:
+  - Compare up to 4 states simultaneously across 6 critical commercial dimensions 
+    using an interactive SVG spider/radar chart.
+Key Dimensions Evaluated (Scale 0-100):
+  1. Base Grid Tariff Competitiveness (HT Industrial / Commercial rate)
+  2. Open Access Surcharge Burden (Lower CSS + AS = Higher Score)
+  3. Banking Framework Favorability (Annual vs Monthly cycle, 100% banking vs capped)
+  4. Transmission & Wheeling Loss Efficiency (Lower technical loss = Higher Score)
+  5. Green Energy Open Access (GEOA) Ground Implementation Ease
+  6. Regulatory Stability & Order Timeliness (MYT predictability)
+Interactive Output:
+  - Automated "NewRa State Attractiveness Index" (e.g., Gujarat: 88/100, Rajasthan: 84/100, 
+    Maharashtra: 72/100).
+  - Side-by-side difference table highlighting the single most profitable state for a given C&I load.
+
+
+[FEATURE 05] HISTORICAL TARIFF ORDER SCRUBBER ("REGULATORY TIME MACHINE")
+--------------------------------------------------------------------------------
+Category: Longitudinal Analytics & Rate Trend Modeling
+Inspiration: Multi-Year Tariff (MYT) trajectory and inflation tracking
+Concept:
+  - An interactive horizontal scrubber timeline enabling analysts to travel 
+    backward and forward across DISCOM tariff orders over the past 5 fiscal years 
+    (FY22 through FY27 Drafts).
+Key Capabilities:
+  - Displays how energy charges, fixed demand charges, FAC/FPPAS, CSS, and wheeling 
+    charges have evolved year-over-year.
+  - Percentage CAGR calculation for electricity cost inflation in each DISCOM.
+  - Predictive projection engine: Calculates expected tariff escalation for 15-year 
+    PPA financial models based on historical true-up trajectory.
+
+
+[FEATURE 06] 49 DISCOM VITALITY & TARIFF SHOCK RISK SCORECARD
+--------------------------------------------------------------------------------
+Category: Utility Health, Financial Risk & Offtaker Security
+Inspiration: Ministry of Power Integrated DISCOM Ratings
+Concept:
+  - A clean diagnostic scorecard for all 49 DISCOMs evaluating operational and 
+    regulatory health factors that impact commercial PPA safety.
+Metrics Tracked:
+  - ACS-ARR Gap (Average Cost of Supply vs Average Revenue Realized, Rs/kWh).
+  - AT&C Loss % vs SERC Mandated Target.
+  - Regulatory Asset Overhang (Accumulated True-Up Deficit).
+  - "Tariff Shock Risk Index" (High / Moderate / Low probability of imminent 15%+ tariff hike).
+  - Visual status pill: Healthy (A+), Stable (B), Distressed (C-).
+
+
+[FEATURE 07] INSTANT REGULATORY PASSPORT BUILDER WITH TAMPER-PROOF QR CODE
+--------------------------------------------------------------------------------
+Category: Enterprise Workflows & Downstream Integration
+Inspiration: GES/GEP Statutory Identity System for NewRa Lens & GridFlex
+Concept:
+  - A 3-step rapid wizard where users input:
+      1. Consumer / Generator Coordinates (State, DISCOM, Connection Voltage)
+      2. Contract Demand & RE Tech (Solar / Wind / Hybrid)
+      3. Supply Mode (Captive, Group Captive, Third-Party, Green Open Access)
+Output Generated:
+  - Instant official "NewRa Regulatory Passport" containing:
+      * Unique Passport URN (e.g., `GES-URN-MH-MSEDCL-2026-X99`)
+      * Scannable verification QR Code linking directly to the live verified profile
+      * Cryptographic SHA-256 data hash guaranteeing the tariff numbers match the SERC gazette
+      * One-click PDF download & JSON webhook feed into NewRa Lens and GridFlex.
+
+
+[FEATURE 08] GREEN ENERGY OPEN ACCESS (GEOA) RULEBOOK VS GROUND REALITY MATRIX
+--------------------------------------------------------------------------------
+Category: Policy Intelligence & Dispute Risk Reduction
+Inspiration: Ministry of Power 100 kW GEOA Rules vs State SERC Divergence
+Concept:
+  - An interactive diagnostic matrix highlighting the exact policy conflicts between
+    the Central Electricity Ministry (MoP) 100 kW mandate and individual state regulations.
+Diagnostic Indicators:
+  - Threshold Compliance: 100 kW notified vs 1 MW legacy restriction.
+  - CSS Exemption Status: Whether green energy enjoys concession or faces full surcharge.
+  - Banking Window: 30-day settlement vs monthly settlement.
+  - Single-Window Portal Status: Fully automated portal vs manual physical application.
+  - Actionable Advisory: "Litigation Risk Flag" with references to APTEL and High Court rulings.
+
+
+[FEATURE 09] INTERACTIVE SANKEY ENERGY & LOSS WATERFALL ("THE BARREL VISUALIZER")
+--------------------------------------------------------------------------------
+Category: Energy Accounting & Physical Power Flow
+Inspiration: Physical electron flow from generator busbar to consumer meter
+Concept:
+  - A flowing interactive Sankey diagram tracing 100 Units (kWh) generated at the solar farm:
+      * -3.2 Units: CTU / STU Transmission Loss
+      * -4.5 Units: DISCOM Wheeling Loss
+      * = 92.3 Units Net Energy Delivered to Grid Node
+      * -8.0 Units: In-Kind RE Banking Deduction (if routed to banking)
+      * = 84.3 Units Net Energy Settled at Consumer Bus
+Key Value:
+  - Makes technical loss gross-up intuitive for corporate sustainability heads and financiers.
+  - Hovering on any slice reveals the governing Tariff Clause and exact Rs loss value.
+
+
+[FEATURE 10] NATURAL LANGUAGE CMD+K REGULATORY CALCULATOR BOT
+--------------------------------------------------------------------------------
+Category: Productivity, Search & Speed
+Inspiration: Superhuman / Raycast style command palette intelligence
+Concept:
+  - Upgrades the existing Ctrl+K search dialog into a computational assistant.
+Sample Queries Executable Directly in Search:
+  - "MH 33kV landed cost with 3.20 PPA" -> Instantly shows Rs 5.12/kWh landed cost.
+  - "Gujarat wheeling loss 11kV" -> Returns exact 6.00% + tariff order clause.
+  - "Compare Rajasthan vs Karnataka solar banking" -> Opens side-by-side comparison.
+  - "Is 150 kW eligible for Open Access in TN?" -> Returns GEOA status & minimum capacity rule.
+
+================================================================================
+RECOMMENDED ROLLOUT PHASING
+================================================================================
+Phase 1 (Immediate - High Impact Visuals):
+  - Feature 04: Multi-State Regulatory Radar & Comparator Arena
+  - Feature 02: 96-Block TOD & Dispatch Arbitrage Heatmap
+  - Feature 07: Regulatory Passport Builder with Scannable QR Code
+
+Phase 2 (Grid & Commercial Depth):
+  - Feature 01: Bharat Transmission Topology Visualizer (Expanding the India Map)
+  - Feature 03: Interactive 26/51 Captive Equity Structuring Canvas
+  - Feature 09: Interactive Sankey Energy & Loss Waterfall
+
+Phase 3 (Enterprise Intelligence & Forecasting):
+  - Feature 05: Historical Tariff Scrubber ("Regulatory Time Machine")
+  - Feature 06: 49 DISCOM Vitality Scorecard
+  - Feature 08: Green Energy Open Access Ground Reality Matrix
+  - Feature 10: Natural Language Command Palette Calculations
+================================================================================

@@ -1,11 +1,17 @@
 import React from 'react';
 import { CheckCircle2, AlertTriangle, Clock, HelpCircle, Archive, ShieldAlert } from 'lucide-react';
 
-export default function StatusBadge({ status, showWarningBanner = false, className = '' }) {
+export interface StatusBadgeProps {
+  status?: string;
+  showWarningBanner?: boolean;
+  className?: string;
+}
+
+export default function StatusBadge({ status, showWarningBanner = false, className = '' }: StatusBadgeProps) {
   const normalized = status ? status.toLowerCase() : 'pending';
 
   let badgeStyle = 'bg-slate-800/80 text-slate-300 border-slate-700';
-  let Icon = HelpCircle;
+  let Icon: React.ComponentType<{ className?: string }> = HelpCircle;
   let label = status || 'Data Not Available';
 
   if (normalized.includes('official verified')) {

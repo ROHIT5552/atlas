@@ -239,7 +239,7 @@ export default function LandedCostCalculator() {
             <span>Commercial Modeling Coordinates</span>
           </span>
           <span className="text-xs text-slate-400 font-mono">
-            State â†’ Licensee â†’ Voltage â†’ Generation Assumptions
+            State → Licensee → Voltage → Generation Assumptions
           </span>
         </div>
 
@@ -294,7 +294,7 @@ export default function LandedCostCalculator() {
 
           {/* Base RE PPA Tariff */}
           <div className="space-y-1">
-            <label className="text-[11px] font-semibold text-slate-300">Base RE PPA Tariff (â‚¹/kWh)</label>
+            <label className="text-[11px] font-semibold text-slate-300">Base RE PPA Tariff (₹/kWh)</label>
             <input
               type="number"
               step="0.05"
@@ -342,22 +342,22 @@ export default function LandedCostCalculator() {
 
               <div className="space-y-0.5">
                 <div className="text-2xl font-bold font-mono text-slate-100">
-                  â‚¹{captiveLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
+                  ₹{captiveLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
                   <TrendingDown className="w-3.5 h-3.5" />
-                  <span>Saves â‚¹{captiveSavingsPerKwh.toFixed(2)}/kWh vs Grid Tariff</span>
+                  <span>Saves ₹{captiveSavingsPerKwh.toFixed(2)}/kWh vs Grid Tariff</span>
                 </div>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1 text-xs">
                 <div className="flex justify-between text-slate-300">
                   <span>Annual Commercial Savings:</span>
-                  <strong className="text-teal-400 font-mono text-sm">â‚¹{captiveAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
+                  <strong className="text-teal-400 font-mono text-sm">₹{captiveAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
                 </div>
                 <div className="flex justify-between text-slate-400 text-[11px]">
                   <span>DISCOM Retail Tariff:</span>
-                  <span>â‚¹{(retailGridTariff + facCharge).toFixed(2)}/kWh</span>
+                  <span>₹{(retailGridTariff + facCharge).toFixed(2)}/kWh</span>
                 </div>
               </div>
             </div>
@@ -368,27 +368,27 @@ export default function LandedCostCalculator() {
                 <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
                   Route 2: Green Energy OA (GEOA)
                 </span>
-                <h3 className="text-xs text-slate-400 mt-0.5">100 kW Threshold â€¢ Green Concessions</h3>
+                <h3 className="text-xs text-slate-400 mt-0.5">100 kW Threshold • Green Concessions</h3>
               </div>
 
               <div className="space-y-0.5">
                 <div className="text-2xl font-bold font-mono text-slate-100">
-                  â‚¹{geoaLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
+                  ₹{geoaLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-sky-400 font-semibold">
                   <TrendingDown className="w-3.5 h-3.5" />
-                  <span>Saves â‚¹{geoaSavingsPerKwh.toFixed(2)}/kWh vs Grid Tariff</span>
+                  <span>Saves ₹{geoaSavingsPerKwh.toFixed(2)}/kWh vs Grid Tariff</span>
                 </div>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1 text-xs">
                 <div className="flex justify-between text-slate-300">
                   <span>Annual Commercial Savings:</span>
-                  <strong className="text-sky-400 font-mono text-sm">â‚¹{geoaAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
+                  <strong className="text-sky-400 font-mono text-sm">₹{geoaAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
                 </div>
                 <div className="flex justify-between text-slate-400 text-[11px]">
                   <span>CSS Applied:</span>
-                  <span>â‚¹{geoaCss.toFixed(2)}/kWh</span>
+                  <span>₹{geoaCss.toFixed(2)}/kWh</span>
                 </div>
               </div>
             </div>
@@ -404,18 +404,18 @@ export default function LandedCostCalculator() {
 
               <div className="space-y-0.5">
                 <div className="text-2xl font-bold font-mono text-slate-100">
-                  â‚¹{thirdPartyLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
+                  ₹{thirdPartyLandedCost.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ kWh Landed</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-amber-400 font-semibold">
                   {thirdPartySavingsPerKwh > 0 ? (
                     <>
                       <TrendingDown className="w-3.5 h-3.5" />
-                      <span>Saves â‚¹{thirdPartySavingsPerKwh.toFixed(2)}/kWh vs Grid</span>
+                      <span>Saves ₹{thirdPartySavingsPerKwh.toFixed(2)}/kWh vs Grid</span>
                     </>
                   ) : (
                     <>
                       <TrendingUp className="w-3.5 h-3.5 text-rose-400" />
-                      <span className="text-rose-400">â‚¹{Math.abs(thirdPartySavingsPerKwh).toFixed(2)} Premium over Grid</span>
+                      <span className="text-rose-400">₹{Math.abs(thirdPartySavingsPerKwh).toFixed(2)} Premium over Grid</span>
                     </>
                   )}
                 </div>
@@ -424,11 +424,11 @@ export default function LandedCostCalculator() {
               <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1 text-xs">
                 <div className="flex justify-between text-slate-300">
                   <span>Annual Commercial Savings:</span>
-                  <strong className="text-slate-100 font-mono text-sm">â‚¹{thirdPartyAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
+                  <strong className="text-slate-100 font-mono text-sm">₹{thirdPartyAnnualSavingsRs.toFixed(2)} Cr / yr</strong>
                 </div>
                 <div className="flex justify-between text-slate-400 text-[11px]">
                   <span>CSS + AS Total Surcharges:</span>
-                  <span className="text-amber-400 font-medium">â‚¹{(rawCss + rawAs).toFixed(2)}/kWh</span>
+                  <span className="text-amber-400 font-medium">₹{(rawCss + rawAs).toFixed(2)}/kWh</span>
                 </div>
               </div>
             </div>
@@ -441,11 +441,11 @@ export default function LandedCostCalculator() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xs font-bold text-slate-100 uppercase tracking-wider">
-                    Landed Tariff Waterfall Breakdown (â‚¹/kWh)
+                    Landed Tariff Waterfall Breakdown (₹/kWh)
                   </h3>
                   <p className="text-xs text-slate-400 mt-0.5">Itemized regulatory components building up to total landed cost.</p>
                 </div>
-                <span className="text-xs font-mono text-teal-400 font-semibold">â‚¹/kWh</span>
+                <span className="text-xs font-mono text-teal-400 font-semibold">₹/kWh</span>
               </div>
 
               <div className="h-72 w-full">
@@ -463,7 +463,7 @@ export default function LandedCostCalculator() {
                     <YAxis stroke="#C6CBD9" fontSize={11} domain={[0, 'auto']} />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#07122A', borderColor: '#2D50A1', borderRadius: '12px', fontSize: '12px' }}
-                      formatter={(value) => [`â‚¹${value.toFixed(2)} / kWh`, 'Cost Component']}
+                      formatter={(value) => [`₹${value.toFixed(2)} / kWh`, 'Cost Component']}
                     />
                     <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                       {waterfallData.map((entry, index) => (
@@ -494,7 +494,7 @@ export default function LandedCostCalculator() {
                     <YAxis stroke="#C6CBD9" fontSize={11} />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#07122A', borderColor: '#2D50A1', borderRadius: '12px', fontSize: '12px' }}
-                      formatter={(value) => [`â‚¹${value.toFixed(2)} / kWh`, 'Tariff']}
+                      formatter={(value) => [`₹${value.toFixed(2)} / kWh`, 'Tariff']}
                     />
                     <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
                     <Bar dataKey="Landed_Cost" fill="#28B8B4" radius={[6, 6, 0, 0]} name="Landed OA Tariff" />
@@ -526,9 +526,9 @@ export default function LandedCostCalculator() {
                 <tbody className="divide-y divide-[#2D50A1]/30 text-[var(--text)]">
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Base RE PPA Rate</td>
-                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">â‚¹{baseRePpaTariff.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{baseRePpaTariff.toFixed(2)}</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{baseRePpaTariff.toFixed(2)}</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">₹{baseRePpaTariff.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{baseRePpaTariff.toFixed(2)}</td>
+                    <td className="px-4 py-3 font-mono">₹{baseRePpaTariff.toFixed(2)}</td>
                     <td className="px-4 py-3 text-[var(--muted)]">Contractual PPA term</td>
                   </tr>
                   <tr>
@@ -536,51 +536,51 @@ export default function LandedCostCalculator() {
                     <td className="px-4 py-3 font-mono text-[var(--lilac)]">
                       {totalLossPct}% (Tx {txLossPct}% + Wh {whLossPct}%)
                     </td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{lossCostComponent.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{lossCostComponent.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{lossCostComponent.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{lossCostComponent.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">Multiplier: 1/(1 - Loss)</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Intra-State Transmission Charge</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{rawTxChargePerMwDay}/MW/day</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{txChargePerKwh.toFixed(3)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{txChargePerKwh.toFixed(3)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{rawTxChargePerMwDay}/MW/day</td>
+                    <td className="px-4 py-3 font-mono">+₹{txChargePerKwh.toFixed(3)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{txChargePerKwh.toFixed(3)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">State STU MYT Tariff Order</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Wheeling Charge</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{rawWheelingCharge.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{rawWheelingCharge.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{rawWheelingCharge.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{rawWheelingCharge.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">DISCOM Open Access Order</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Cross Subsidy Surcharge (CSS)</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{rawCss.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">â‚¹0.00 (Exempted)</td>
-                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+â‚¹{rawCss.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{rawCss.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">₹0.00 (Exempted)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+₹{rawCss.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">Electricity Rules 2005 Rule 3</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Additional Surcharge (AS)</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{rawAs.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">â‚¹0.00 (Exempted)</td>
-                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+â‚¹{rawAs.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{rawAs.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-bold text-[var(--lilac)]">₹0.00 (Exempted)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)]">+₹{rawAs.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">Supreme Court & SERC Orders</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-white">Electricity Duty ({electricityDutyPct}%)</td>
-                    <td className="px-4 py-3 font-mono">â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
-                    <td className="px-4 py-3 font-mono">+â‚¹{electricityDutyCost.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">₹{electricityDutyCost.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{electricityDutyCost.toFixed(2)}/kWh</td>
+                    <td className="px-4 py-3 font-mono">+₹{electricityDutyCost.toFixed(2)}/kWh</td>
                     <td className="px-4 py-3 text-[var(--muted)]">State Electricity Duty Act</td>
                   </tr>
                   <tr className="bg-[var(--bg)] font-bold text-sm">
-                    <td className="px-4 py-3 text-[var(--lilac)]">Total Landed Tariff (â‚¹/kWh)</td>
-                    <td className="px-4 py-3 font-mono text-[var(--muted)]">â€”</td>
-                    <td className="px-4 py-3 font-mono text-[var(--lilac)] text-base">â‚¹{captiveLandedCost.toFixed(2)}</td>
-                    <td className="px-4 py-3 font-mono text-white text-base">â‚¹{thirdPartyLandedCost.toFixed(2)}</td>
-                    <td className="px-4 py-3 text-xs text-[var(--lilac)]">DISCOM: â‚¹{(retailGridTariff + facCharge).toFixed(2)}</td>
+                    <td className="px-4 py-3 text-[var(--lilac)]">Total Landed Tariff (₹/kWh)</td>
+                    <td className="px-4 py-3 font-mono text-[var(--muted)]">—</td>
+                    <td className="px-4 py-3 font-mono text-[var(--lilac)] text-base">₹{captiveLandedCost.toFixed(2)}</td>
+                    <td className="px-4 py-3 font-mono text-white text-base">₹{thirdPartyLandedCost.toFixed(2)}</td>
+                    <td className="px-4 py-3 text-xs text-[var(--lilac)]">DISCOM: ₹{(retailGridTariff + facCharge).toFixed(2)}</td>
                   </tr>
                 </tbody>
               </table>

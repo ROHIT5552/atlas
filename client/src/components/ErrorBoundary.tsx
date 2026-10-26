@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
-export default class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface Props {
+  children?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error: Error | null;
+}
+
+export default class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('NewRa UI Error Caught:', error, errorInfo);
   }
 
@@ -20,11 +29,10 @@ export default class ErrorBoundary extends React.Component {
     window.location.reload();
   };
 
-
   render() {
     if (this.state.hasError) {
       return (
-        <div className="p-8 max-w-2xl mx-auto my-12 rounded-3xl bg-[var(--surface-1)] border border-[var(--line)]/50 shadow-2xl text-center space-y-4">
+        <div className="p-4 sm:p-8 max-w-2xl w-[95%] mx-auto my-8 sm:my-12 rounded-3xl bg-[var(--surface-1)] border border-[var(--line)]/50 shadow-2xl text-center space-y-4">
           <div className="w-12 h-12 rounded-2xl bg-[var(--violet)]/20 border border-[var(--line)]/40 flex items-center justify-center text-[var(--lilac)] mx-auto">
             <AlertTriangle className="w-6 h-6" />
           </div>
