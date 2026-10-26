@@ -23,7 +23,7 @@ export default function Navbar({
 }: NavbarProps) {
   return (
     <header className="vesper-navbar sticky top-0 z-40 border-b border-[var(--line)] px-2.5 sm:px-4 lg:px-6 py-2 sm:py-2.5 backdrop-blur-md transition-all bg-[var(--surface-1)]/95 shadow-sm">
-      <div className="vesper-header-inner max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+      <div className="vesper-header-inner w-full flex items-center justify-between gap-2 sm:gap-4">
         
         {/* LEFT SECTION: Hamburger Toggle + Official NewRa Grids Logo + Atlas Brandmark */}
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
