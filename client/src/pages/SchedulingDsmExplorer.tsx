@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CalendarClock, AlertTriangle, CheckCircle2, TrendingDown, Layers, ShieldAlert } from 'lucide-react';
 import { api } from '../services/api';
 import StatusBadge from '../components/StatusBadge';
@@ -128,17 +128,17 @@ export default function SchedulingDsmExplorer() {
                 </thead>
                 <tbody className="divide-y divide-slate-800 text-slate-300 font-medium">
                   <tr className="hover:bg-slate-900/50">
-                    <td className="px-4 py-3 font-mono font-bold text-emerald-400">Within Â±10%</td>
+                    <td className="px-4 py-3 font-mono font-bold text-emerald-400">Within ±10%</td>
                     <td className="px-4 py-3">100% Fixed PPA / Feed-in Tariff (No Penalty)</td>
                     <td className="px-4 py-3 text-emerald-400">Green Safe Zone</td>
                   </tr>
                   <tr className="hover:bg-slate-900/50">
-                    <td className="px-4 py-3 font-mono font-bold text-amber-400">Â±10% to Â±15%</td>
+                    <td className="px-4 py-3 font-mono font-bold text-amber-400">±10% to ±15%</td>
                     <td className="px-4 py-3">90% of PPA rate (10% penalty on absolute deviation)</td>
                     <td className="px-4 py-3 text-amber-400">Moderate Penalty</td>
                   </tr>
                   <tr className="hover:bg-slate-900/50">
-                    <td className="px-4 py-3 font-mono font-bold text-rose-400">Beyond Â±15%</td>
+                    <td className="px-4 py-3 font-mono font-bold text-rose-400">Beyond ±15%</td>
                     <td className="px-4 py-3">75% to 50% of PPA rate + Ancillary Grid Support surcharge</td>
                     <td className="px-4 py-3 text-rose-400">Heavy Commercial Penalty</td>
                   </tr>

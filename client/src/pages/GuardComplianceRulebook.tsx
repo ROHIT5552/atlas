@@ -250,11 +250,11 @@ export default function GuardComplianceRulebook() {
             </div>
             <div className="flex justify-between text-[11px]">
               <span className="text-[var(--muted)]/70">Penalty Rate:</span>
-              <span className="text-white">150% (₹{penaltyDemandRate}/kVA)</span>
+              <span className="text-white">150% (₹{penaltyDemandRate} / kVA/month)</span>
             </div>
             <div className="flex justify-between text-[11px] pt-1 border-t border-[var(--line)]/30">
               <span className="text-[var(--muted)]/70">Penalty Surcharge:</span>
-              <span className="text-[var(--lilac)] font-bold">₹{excessDemandPenalty.toLocaleString()}/mo</span>
+              <span className="text-[var(--lilac)] font-bold">₹ {excessDemandPenalty.toLocaleString()} / month</span>
             </div>
           </div>
         </div>

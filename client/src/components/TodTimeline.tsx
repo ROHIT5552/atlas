@@ -115,7 +115,7 @@ export default function TodTimeline({ todProfile, baseEnergyRate = 7.50 }: TodTi
                   isCurrent ? 'ring-2 ring-white z-10 shadow-lg scale-y-105' : 'opacity-85 hover:opacity-100'
                 }`}
                 onClick={() => setSelectedHour(Math.floor(start))}
-                title={`${slot.slot_name}: ${slot.start_time} - ${slot.end_time} (${slot.rate_delta >= 0 ? '+' : ''}${slot.rate_delta} Rs/kWh)`}
+                title={`${slot.slot_name}: ${slot.start_time} - ${slot.end_time} (${slot.rate_delta >= 0 ? '+' : ''}₹${slot.rate_delta}/kWh)`}
               >
                 <span className="text-[9px] sm:text-[10px] font-extrabold text-slate-950 truncate max-w-full drop-shadow-sm">
                   {slot.slot_name}

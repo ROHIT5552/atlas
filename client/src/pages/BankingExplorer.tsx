@@ -226,7 +226,7 @@ export default function BankingExplorer() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[11px] font-bold text-[var(--muted)]">DISCOM Grid Tariff (Rs/kWh)</label>
+                <label className="text-[11px] font-bold text-[var(--muted)]">DISCOM Grid Tariff (₹/kWh)</label>
                 <input
                   type="number"
                   step="0.1"
@@ -237,7 +237,7 @@ export default function BankingExplorer() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[11px] font-bold text-[var(--muted)]">APPC Cashout Rate (Rs/kWh)</label>
+                <label className="text-[11px] font-bold text-[var(--muted)]">APPC Cashout Rate (₹/kWh)</label>
                 <input
                   type="number"
                   step="0.05"

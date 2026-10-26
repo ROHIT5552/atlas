@@ -796,8 +796,8 @@ export default function RegulatoryProfileExplorer({ preselectedState, preselecte
 
                   <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
                     <span className="text-slate-500 font-semibold uppercase text-[10px]">RE Error Tolerance</span>
-                    <h4 className="text-xl font-bold font-mono text-emerald-400">Â±10%</h4>
-                    <p className="text-slate-400">No penalty within Â±10% AvC</p>
+                    <h4 className="text-xl font-bold font-mono text-emerald-400">±10%</h4>
+                    <p className="text-slate-400">No penalty within ±10% AvC</p>
                   </div>
                 </div>
 

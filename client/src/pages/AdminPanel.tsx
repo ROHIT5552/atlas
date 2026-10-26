@@ -154,7 +154,7 @@ export default function AdminPanel() {
                   </div>
                   <div className="text-[11px] text-slate-400 truncate">{t.tariff_category_name}</div>
                   <div className="pt-1 flex items-center justify-between">
-                    <span className="font-mono text-white font-bold">Rs {t.energy_charge}/kVAh</span>
+                    <span className="font-mono text-white font-bold">₹ {t.energy_charge} / kVAh</span>
                     <StatusBadge status={t.verification_status} />
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function AdminPanel() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Energy Charge */}
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300">Base Energy Charge (Rs/kVAh)</label>
+                <label className="text-xs font-semibold text-slate-300">Base Energy Charge (₹/kVAh)</label>
                 <input
                   type="number"
                   step="0.01"
@@ -203,7 +203,7 @@ export default function AdminPanel() {
 
               {/* Demand Charge */}
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300">Demand Charge (Rs/kVA/month)</label>
+                <label className="text-xs font-semibold text-slate-300">Demand Charge (₹/kVA/month)</label>
                 <input
                   type="number"
                   step="1"

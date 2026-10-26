@@ -196,7 +196,7 @@ export default function TodVisualizer() {
                       backgroundColor: s.color || '#3b82f6'
                     }}
                     className="h-full"
-                    title={`${s.slot_name}: ${s.start_time}-${s.end_time} (${s.rate_delta >= 0 ? '+' : ''}${s.rate_delta} Rs)`}
+                    title={`${s.slot_name}: ${s.start_time}-${s.end_time} (${s.rate_delta >= 0 ? '+' : ''}₹${s.rate_delta}/kWh)`}
                   />
                 ))}
               </div>

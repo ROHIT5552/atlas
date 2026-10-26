@@ -20,6 +20,7 @@ import {
 import { api } from '../services/api';
 import { exportPassportToCSV } from '../utils/exportUtils';
 import { exportElementToPDF } from '../utils/pdfExportUtils';
+import { cleanUnit, formatRate, formatCurrency } from '../utils/formatUtils';
 
 export default function RegulatoryPassportGenerator() {
   const [states, setStates] = useState([]);
@@ -355,12 +356,12 @@ export default function RegulatoryPassportGenerator() {
                     <div>
                       <span className="text-[10px] text-[var(--muted)]/60 block font-sans">Base Energy</span>
                       <span className="font-bold text-white">₹{passport.tariff_and_billing.base_energy_charge_rs_unit}</span>
-                      <span className="text-[10px] text-[var(--muted)]/50 block font-sans">per {passport.tariff_and_billing.energy_unit}</span>
+                      <span className="text-[10px] text-[var(--muted)]/50 block font-sans">per {cleanUnit(passport.tariff_and_billing.energy_unit, 'kVAh')}</span>
                     </div>
                     <div>
                       <span className="text-[10px] text-[var(--muted)]/60 block font-sans">Demand Charge</span>
                       <span className="font-bold text-white">₹{passport.tariff_and_billing.demand_charge_rs_kva_mo}</span>
-                      <span className="text-[10px] text-[var(--muted)]/50 block font-sans">per kVA/mo</span>
+                      <span className="text-[10px] text-[var(--muted)]/50 block font-sans">per kVA/month</span>
                     </div>
                   </div>
 

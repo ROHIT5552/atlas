@@ -210,11 +210,11 @@ export default function Comparator() {
                 {/* 1. Base Energy Tariff */}
                 <tr className="hover:bg-slate-900/40">
                   <td className="px-5 py-3.5 text-slate-400 font-semibold sticky left-0 bg-slate-950 z-10 border-r border-slate-800">
-                    HT Base Energy Rate (Rs/kVAh)
+                    HT Base Energy Rate (₹/kVAh)
                   </td>
                   {comparisonData.matrix.map((item, idx) => (
                     <td key={idx} className="px-5 py-3.5 font-mono text-cyan-300 font-bold text-sm">
-                      Rs {item.avg_ht_energy_charge_rs_kvah || item.energy_charge_rs_kvah || '7.50'}
+                      ₹ {item.avg_ht_energy_charge_rs_kvah || item.energy_charge_rs_kvah || '7.50'} / kVAh
                     </td>
                   ))}
                 </tr>
@@ -222,11 +222,11 @@ export default function Comparator() {
                 {/* 2. Demand Charge */}
                 <tr className="hover:bg-slate-900/40">
                   <td className="px-5 py-3.5 text-slate-400 font-semibold sticky left-0 bg-slate-950 z-10 border-r border-slate-800">
-                    Demand Charge (Rs/kVA/mo)
+                    Demand Charge (₹/kVA/month)
                   </td>
                   {comparisonData.matrix.map((item, idx) => (
                     <td key={idx} className="px-5 py-3.5 font-mono text-white">
-                      Rs {item.avg_demand_charge_rs_kva_month || item.demand_charge_rs_kva_m || '450'}
+                      ₹ {item.avg_demand_charge_rs_kva_month || item.demand_charge_rs_kva_m || '450'} / kVA/month
                     </td>
                   ))}
                 </tr>
@@ -238,7 +238,7 @@ export default function Comparator() {
                   </td>
                   {comparisonData.matrix.map((item, idx) => (
                     <td key={idx} className="px-5 py-3.5 font-mono text-amber-400">
-                      Rs {item.cross_subsidy_surcharge_rs_kwh || item.cross_subsidy_surcharge || '1.85'} / kWh
+                      ₹ {item.cross_subsidy_surcharge_rs_kwh || item.cross_subsidy_surcharge || '1.85'} / kWh
                     </td>
                   ))}
                 </tr>
@@ -250,7 +250,7 @@ export default function Comparator() {
                   </td>
                   {comparisonData.matrix.map((item, idx) => (
                     <td key={idx} className="px-5 py-3.5 font-mono text-purple-400">
-                      Rs {item.additional_surcharge_rs_kwh || item.additional_surcharge || '0.90'} / kWh
+                      ₹ {item.additional_surcharge_rs_kwh || item.additional_surcharge || '0.90'} / kWh
                     </td>
                   ))}
                 </tr>

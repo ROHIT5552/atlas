@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Terminal, Copy, Check, Play, Layers, Code2, Sparkles, Send, ExternalLink } from 'lucide-react';
 import { api } from '../services/api';
 
@@ -64,8 +64,8 @@ headers = {"Accept": "application/json", "X-NewRa-Client": "Bill-Scanner"}
 response = requests.get(url, headers=headers)
 profile = response.json()
 
-print(f"Energy Charge: Rs {profile['applicable_tariff']['energy_charge']}/kVAh")
-print(f"Wheeling Charge: Rs {profile['oa_charges_breakdown'][0]['wheeling_charge']}/kWh")`;
+print(f"Energy Charge: ₹ {profile['applicable_tariff']['energy_charge']}/kVAh")
+print(f"Wheeling Charge: ₹ {profile['oa_charges_breakdown'][0]['wheeling_charge']}/kWh")`;
     }
   };
 

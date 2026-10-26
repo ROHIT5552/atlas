@@ -254,7 +254,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div className="pt-2 border-t border-[var(--line)]/30 flex justify-between items-center text-xs">
                     <span className="text-[var(--muted)]/60">Surcharge Savings:</span>
                     <span className="font-mono font-bold text-[var(--lilac)]">
-                      +?{result.surcharges_preview.captive_exemption_savings_rs_kwh}/kWh
+                      +₹{result.surcharges_preview.captive_exemption_savings_rs_kwh}/kWh
                     </span>
                   </div>
                 </div>
@@ -350,7 +350,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30">
                     <span className="text-[10px] text-[var(--muted)]/60 block font-medium">Wheeling Charge</span>
                     <span className="text-base font-mono font-bold text-white">
-                      ?{result.surcharges_preview.wheeling_charge}
+                      ₹ {result.surcharges_preview.wheeling_charge}
                     </span>
                     <span className="text-[10px] text-[var(--muted)]/40 block">per kWh</span>
                   </div>
@@ -358,7 +358,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30">
                     <span className="text-[10px] text-[var(--muted)]/60 block font-medium">Transmission Charge</span>
                     <span className="text-base font-mono font-bold text-white">
-                      ?{result.surcharges_preview.transmission_charge_per_mw_day.toLocaleString()}
+                      ₹ {result.surcharges_preview.transmission_charge_per_mw_day.toLocaleString()}
                     </span>
                     <span className="text-[10px] text-[var(--muted)]/40 block">per MW/day</span>
                   </div>
@@ -366,7 +366,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30">
                     <span className="text-[10px] text-[var(--muted)]/60 block font-medium">Cross Subsidy (CSS)</span>
                     <span className="text-base font-mono font-bold text-[var(--lilac)]">
-                      ?{result.surcharges_preview.css_third_party}
+                      ₹ {result.surcharges_preview.css_third_party}
                     </span>
                     <span className="text-[10px] text-green-400 block font-medium">Exempt in Captive</span>
                   </div>
@@ -374,7 +374,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--line)]/30">
                     <span className="text-[10px] text-[var(--muted)]/60 block font-medium">Additional Surcharge</span>
                     <span className="text-base font-mono font-bold text-[var(--lilac)]">
-                      ?{result.surcharges_preview.as_third_party}
+                      ₹ {result.surcharges_preview.as_third_party}
                     </span>
                     <span className="text-[10px] text-green-400 block font-medium">Exempt in Captive</span>
                   </div>
@@ -384,7 +384,7 @@ export default function ConsumerEligibilityChecker({ onSendToGridflex }) {
                   <div>
                     <span className="text-xs font-bold text-white flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5 text-[var(--lilac)]" />
-                      Net Captive Advantage: ?{result.surcharges_preview.captive_exemption_savings_rs_kwh}/kWh in Surcharge Waivers
+                      Net Captive Advantage: ₹ {result.surcharges_preview.captive_exemption_savings_rs_kwh}/kWh in Surcharge Waivers
                     </span>
                     <p className="text-[11px] text-[var(--muted)]/70 mt-0.5">
                       Governed by: {result.regulatory_citation}

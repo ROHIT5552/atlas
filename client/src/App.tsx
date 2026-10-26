@@ -35,17 +35,115 @@ import CaptiveStructuringEngine from './pages/CaptiveStructuringEngine';
 import SettlementWaterfallEngine from './pages/SettlementWaterfallEngine';
 import RegulatoryChangePropagator from './pages/RegulatoryChangePropagator';
 
+const VALID_TABS: readonly TabId[] = [
+  'dashboard',
+  'explorer',
+  'passport',
+  'consumer-eligibility',
+  'generator-eligibility',
+  'captive-structuring',
+  'connectivity',
+  'tod',
+  'settlement-waterfall',
+  'bill-audit',
+  'downstream-hub',
+  'guard-rules',
+  'change-propagator',
+  'landed-cost',
+  'tariffs',
+  'open-access',
+  'banking',
+  'captive',
+  'metering',
+  'scheduling',
+  'states',
+  'state-detail',
+  'discoms',
+  'discom-detail',
+  'regulations',
+  'compare',
+  'admin',
+  'api-docs'
+] as const;
+
+function getInitialTab(): TabId {
+  try {
+    // 1. Check window.location.hash (e.g. #/landed-cost or #landed-cost)
+    const rawHash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+    if (rawHash && (VALID_TABS as readonly string[]).includes(rawHash)) {
+      return rawHash as TabId;
+    }
+    // 2. Check localStorage
+    const saved = localStorage.getItem('atlas_active_tab');
+    if (saved && (VALID_TABS as readonly string[]).includes(saved)) {
+      return saved as TabId;
+    }
+  } catch (err) {
+    console.warn('Failed to parse initial tab:', err);
+  }
+  return 'dashboard';
+}
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>('dashboard');
+  const [activeTab, setActiveTab] = useState<TabId>(getInitialTab);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [clientFacing, setClientFacing] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  // Selected State / DISCOM query contexts for smooth drilldown
-  const [selectedStateId, setSelectedStateId] = useState<string>('maharashtra');
-  const [selectedDiscomId, setSelectedDiscomId] = useState<string>('msedcl');
-  const [detailStateId, setDetailStateId] = useState<string | null>(null);
-  const [detailDiscomId, setDetailDiscomId] = useState<string | null>(null);
+  // Selected State / DISCOM query contexts for smooth drilldown with localStorage persistence
+  const [selectedStateId, setSelectedStateId] = useState<string>(() => {
+    return localStorage.getItem('atlas_selected_state_id') || 'maharashtra';
+  });
+  const [selectedDiscomId, setSelectedDiscomId] = useState<string>(() => {
+    return localStorage.getItem('atlas_selected_discom_id') || 'msedcl';
+  });
+  const [detailStateId, setDetailStateId] = useState<string | null>(() => {
+    return localStorage.getItem('atlas_detail_state_id') || null;
+  });
+  const [detailDiscomId, setDetailDiscomId] = useState<string | null>(() => {
+    return localStorage.getItem('atlas_detail_discom_id') || null;
+  });
+
+  // Synchronize activeTab to URL hash and localStorage so refresh stays on current menu
+  useEffect(() => {
+    try {
+      localStorage.setItem('atlas_active_tab', activeTab);
+      const currentHash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      if (currentHash !== activeTab) {
+        window.history.replaceState(null, '', `#/${activeTab}`);
+      }
+    } catch (err) {
+      console.warn('Failed to persist active tab:', err);
+    }
+  }, [activeTab]);
+
+  // Listen to browser Back / Forward navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      if (hash && (VALID_TABS as readonly string[]).includes(hash)) {
+        setActiveTab(hash as TabId);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Persist State and DISCOM contexts
+  useEffect(() => {
+    if (selectedStateId) localStorage.setItem('atlas_selected_state_id', selectedStateId);
+  }, [selectedStateId]);
+  useEffect(() => {
+    if (selectedDiscomId) localStorage.setItem('atlas_selected_discom_id', selectedDiscomId);
+  }, [selectedDiscomId]);
+  useEffect(() => {
+    if (detailStateId) localStorage.setItem('atlas_detail_state_id', detailStateId);
+    else localStorage.removeItem('atlas_detail_state_id');
+  }, [detailStateId]);
+  useEffect(() => {
+    if (detailDiscomId) localStorage.setItem('atlas_detail_discom_id', detailDiscomId);
+    else localStorage.removeItem('atlas_detail_discom_id');
+  }, [detailDiscomId]);
 
   // Global keyboard shortcut: Ctrl+K or Cmd+K
   useEffect(() => {
